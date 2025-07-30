@@ -1,0 +1,67 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #808080;
+}
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 100px;
+ 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #193250;
+  text-decoration: none;
+}
+
+/* Menu com itens em linha */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color:  #193250;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Botão */
+.btn-orange {
+  background-color:  #193250;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
