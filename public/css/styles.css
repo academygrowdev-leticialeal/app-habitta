@@ -1,10 +1,6 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #808080;
-}
+@import url('./global.css');
+
+/* NAVBAR */
 
 nav.navbar {
   display: flex;
@@ -12,7 +8,6 @@ nav.navbar {
   justify-content: space-between;
   padding: 0 40px;
   height: 100px;
- 
 }
 
 .logo {
@@ -29,11 +24,10 @@ nav.navbar {
 .project-name {
   font-size: 20px;
   font-weight: bold;
-  color: #193250;
+  color: var(--primary-blue);
   text-decoration: none;
 }
 
-/* Menu com itens em linha */
 .menu {
   display: flex;
   align-items: center;
@@ -50,14 +44,13 @@ nav.navbar {
 
 .menu-item a {
   text-decoration: none;
-  color:  #193250;
+  color:  var(--primary-blue);
   font-weight: 500;
   font-size: 16px;
 }
 
-/* Botão */
 .btn-orange {
-  background-color:  #193250;
+  background-color: var(--primary-blue);
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -65,3 +58,41 @@ nav.navbar {
   font-weight: bold;
 }
 
+/* SECTION - BENEFICIOS */
+
+.title {
+  color: var(--primary-blue);
+  font-family: var(--font-title);
+}
+
+.card-text {
+  color: var(--secondary-gray);
+}
+
+.card-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.75rem;
+  color: var(--primary-blue);
+  background-color: #e0ebf5;
+  transition: background-color .25s, color .25s;
+}
+
+.card:hover .card-circle {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+.card {
+  transition: transform .25s ease-out, box-shadow .25s ease-out;
+  border-color: #e2e6e9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .2);
+}
