@@ -2,12 +2,19 @@
 
 /* NAVBAR */
 
-nav.navbar {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
   height: 100px;
+  background-color: white; 
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {
@@ -49,7 +56,9 @@ nav.navbar {
   font-size: 16px;
 }
 
-.btn-orange {
+/* Botoes */
+
+.btn-orcamento {
   background-color: var(--primary-blue);
   color: white;
   padding: 10px 20px;
@@ -57,6 +66,82 @@ nav.navbar {
   text-decoration: none;
   font-weight: bold;
 }
+
+.btn-orcamento:hover {
+    background: #718091;
+    color: white;
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('/app-habitta/public/assets/images/logosemfundo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 300px 20px; /* antes era 300px */
+    text-align: center;
+   
+
+}
+
+
+/*Como Funciona*/
+
+.como_funciona {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.como_funciona .title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.como_funciona p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #fff; 
+  color: var(--primary-blue); 
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.step:hover .step-icon {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.step-text {
+  color:  var(--primary-blue);
+  font-size: 0.95rem;
+}
+
 
 /* SECTION - BENEFICIOS */
 
@@ -96,3 +181,17 @@ nav.navbar {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .2);
 }
+
+/*Footer*/
+
+.footer{
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 20px 0;
+   
+}
+footer a:hover {
+color: var(--secondary-gray) !important; 
+}
+
+
