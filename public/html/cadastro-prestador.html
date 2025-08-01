@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro Prestador</title>
+
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- CSS Projeto -->
+  <link rel="stylesheet" href="../css/cadastro.css" />
+</head>
+
+<body> 
+  <header>
+    <nav>
+      <a href="index.html" class="btn-voltar">← Voltar para o Home</a>
+    </nav>
+  </header>
+  <main>
+    <section class="container my-5 p-4 rounded shadow-sm" style="max-width: 700px;">
+      <h1 class="mb-4 text-center">Cadastro de Prestador de Serviços</h1>
+
+      <nav>
+        <div class="nav nav-tabs mb-4" id="tipoTab" role="tablist">
+          <button class="nav-link active" id="pf-tab" data-bs-toggle="tab" data-bs-target="#pf" type="button"
+            role="tab" aria-controls="pf" aria-selected="true">Pessoa Física / MEI</button>
+          <button class="nav-link" id="pj-tab" data-bs-toggle="tab" data-bs-target="#pj" type="button" role="tab"
+            aria-controls="pj" aria-selected="false">Pessoa Jurídica</button>
+        </div>
+      </nav>
+
+      <form id="formCadastro" action="" method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" id="tipoPrestador" name="tipoPrestador" value="pf" />
+
+        <div class="tab-content" id="tipoTabContent">
+          <div class="tab-pane fade show active" id="pf" role="tabpanel" aria-labelledby="pf-tab">
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nomePf" class="form-label">Nome *</label>
+                  <input type="text" class="form-control" id="nomePf" name="nomePf" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="sobrenomePf" class="form-label">Sobrenome *</label>
+                  <input type="text" class="form-control" id="sobrenomePf" name="sobrenomePf" required />
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                  <label for="nascimentoPf" class="form-label">Nascimento *</label>
+                  <input type="date" class="form-control" id="nascimentoPf" name="nascimentoPf" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="cpfPf" class="form-label">CPF *</label>
+                  <input type="text" class="form-control" id="cpfPf" name="cpfPf" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="telefonePf" class="form-label">Telefone *</label>
+                  <input type="tel" class="form-control" id="telefonePf" name="telefonePf" required />
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label for="emailPf" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="emailPf" name="emailPf" required />
+              </div>
+
+              <div class="mt-3">
+                <label for="senhaPf" class="form-label">Senha *</label>
+                <input type="password" class="form-control" id="senhaPf" name="senhaPf" required minlength="6" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Documentos</legend>
+              <div class="mb-3">
+                <label for="comprovanteEnderecoPf" class="form-label">Comprovante de Residência *</label>
+                <input type="file" class="form-control" id="comprovanteEnderecoPf" name="comprovanteEnderecoPf"
+                  accept=".pdf,image/*" required />
+              </div>
+              <div class="mb-3">
+                <label for="docIdentificacaoPf" class="form-label">Documento Identificação (RG ou CNH) *</label>
+                <input type="file" class="form-control" id="docIdentificacaoPf" name="docIdentificacaoPf"
+                  accept=".pdf,image/*" required />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Qualificação Profissional e Referências</legend>
+
+              <div class="mb-3">
+                <label for="referenciasProfissionaisPf" class="form-label">Referências Profissionais</label>
+                <textarea class="form-control" id="referenciasProfissionaisPf" name="referenciasProfissionaisPf"
+                  rows="3" placeholder="Informe suas referências profissionais"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="comprovantesQualificacaoPf" class="form-label">Comprovantes de Qualificação (cursos,
+                  certificações)</label>
+                <input type="file" class="form-control" id="comprovantesQualificacaoPf"
+                  name="comprovantesQualificacaoPf[]" multiple accept=".pdf,image/*" />
+              </div>
+
+              <div class="mb-3">
+                <label for="experienciaPortifolioPf" class="form-label">Experiência Profissional e Portfólio</label>
+                <textarea class="form-control" id="experienciaPortifolioPf" name="experienciaPortifolioPf" rows="4"
+                  placeholder="Descreva sua experiência e portfólio"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="fotosTrabalhosPf" class="form-label">Fotos de Trabalhos Anteriores</label>
+                <input type="file" class="form-control" id="fotosTrabalhosPf" name="fotosTrabalhosPf[]" multiple
+                  accept="image/*" />
+              </div>
+
+              <div class="mb-3">
+                <label for="disponibilidadeAgendaPf" class="form-label">Disponibilidade de Agenda e Áreas de
+                  Atuação</label>
+                <textarea class="form-control" id="disponibilidadeAgendaPf" name="disponibilidadeAgendaPf" rows="2"
+                  placeholder="Informe sua disponibilidade e áreas de atuação"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Análise de Antecedentes</legend>
+
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="consentimentoAntecedentesPf"
+                  name="consentimentoAntecedentesPf" required />
+                <label class="form-check-label" for="consentimentoAntecedentesPf">
+                  Autorizo a realização da análise de antecedentes.
+                </label>
+              </div>
+
+              <div class="mb-3">
+                <label for="infoAdicionaisHabittaPf" class="form-label">Informações adicionais para verificação
+                  (opcional)</label>
+                <textarea class="form-control" id="infoAdicionaisHabittaPf" name="infoAdicionaisHabittaPf" rows="3"
+                  placeholder="Informe se desejar"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="visually-hidden">Aceites Legais</legend>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="aceiteTermosPf" name="aceiteTermosPf" required />
+                <label class="form-check-label" for="aceiteTermosPf">
+                  Aceito os <a href="#" data-bs-toggle="modal" data-bs-target="#modalTermos">Termos de Uso e Serviços -
+                    Habitta</a>.
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="aceitePoliticaPf" name="aceitePoliticaPf"
+                  required />
+                <label class="form-check-label" for="aceitePoliticaPf">
+                  Aceito a <a href="#" data-bs-toggle="modal" data-bs-target="#modalPolitica">Política de Privacidade da
+                    Habitta</a>.
+                </label>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="aceiteRegrasPf" name="aceiteRegrasPf" required />
+                <label class="form-check-label" for="aceiteRegrasPf">
+                  Aceito as <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegras">Regras e Informações da Habitta</a>.
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="tab-pane fade" id="pj" role="tabpanel" aria-labelledby="pj-tab">
+            <fieldset>
+              <legend>Dados da Empresa</legend>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="cnpjPj" class="form-label">CNPJ *</label>
+                  <input type="text" class="form-control" id="cnpjPj" name="cnpjPj" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="nomeFantasiaPj" class="form-label">Nome Fantasia *</label>
+                  <input type="text" class="form-control" id="nomeFantasiaPj" name="nomeFantasiaPj" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="razaoSocialPj" class="form-label">Razão Social *</label>
+                  <input type="text" class="form-control" id="razaoSocialPj" name="razaoSocialPj" required />
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label for="emailPj" class="form-label">Email *</label>
+                <input type="email" class="form-control" id="emailPj" name="emailPj" required />
+              </div>
+
+              <div class="mt-3">
+                <label for="senhaPj" class="form-label">Senha *</label>
+                <input type="password" class="form-control" id="senhaPj" name="senhaPj" required minlength="6" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Documentos da Empresa</legend>
+              <div class="mb-3">
+                <label for="comprovanteEnderecoPj" class="form-label">Comprovante de Endereço *</label>
+                <input type="file" class="form-control" id="comprovanteEnderecoPj" name="comprovanteEnderecoPj"
+                  accept=".pdf,image/*" required />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Representante Legal</legend>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nomeRepPj" class="form-label">Nome *</label>
+                  <input type="text" class="form-control" id="nomeRepPj" name="nomeRepPj" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="sobrenomeRepPj" class="form-label">Sobrenome *</label>
+                  <input type="text" class="form-control" id="sobrenomeRepPj" name="sobrenomeRepPj" required />
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                  <label for="nascimentoRepPj" class="form-label">Nascimento *</label>
+                  <input type="date" class="form-control" id="nascimentoRepPj" name="nascimentoRepPj" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="cpfRepPj" class="form-label">CPF *</label>
+                  <input type="text" class="form-control" id="cpfRepPj" name="cpfRepPj" required />
+                </div>
+                <div class="col-md-4">
+                  <label for="telefoneRepPj" class="form-label">Telefone *</label>
+                  <input type="tel" class="form-control" id="telefoneRepPj" name="telefoneRepPj" required />
+                </div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="docIdentificacaoRepPj" class="form-label">Documento Identificação Representante *</label>
+                <input type="file" class="form-control" id="docIdentificacaoRepPj" name="docIdentificacaoRepPj"
+                  accept=".pdf,image/*" required />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Qualificação Profissional e Referências</legend>
+              <div class="mb-3">
+                <label for="referenciasProfissionaisPj" class="form-label">Referências Profissionais</label>
+                <textarea class="form-control" id="referenciasProfissionaisPj" name="referenciasProfissionaisPj"
+                  rows="3" placeholder="Informe as referências profissionais"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="comprovantesQualificacaoPj" class="form-label">Comprovantes de Qualificação (cursos,
+                  certificações)</label>
+                <input type="file" class="form-control" id="comprovantesQualificacaoPj"
+                  name="comprovantesQualificacaoPj[]" multiple accept=".pdf,image/*" />
+              </div>
+              <div class="mb-3">
+                <label for="experienciaPortifolioPj" class="form-label">Experiência Profissional e Portfólio</label>
+                <textarea class="form-control" id="experienciaPortifolioPj" name="experienciaPortifolioPj" rows="4"
+                  placeholder="Descreva a experiência e portfólio"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="fotosTrabalhosPj" class="form-label">Fotos de Trabalhos Anteriores</label>
+                <input type="file" class="form-control" id="fotosTrabalhosPj" name="fotosTrabalhosPj[]" multiple
+                  accept="image/*" />
+              </div>
+              <div class="mb-3">
+                <label for="disponibilidadeAgendaPj" class="form-label">Disponibilidade de Agenda e Áreas de
+                  Atuação</label>
+                <textarea class="form-control" id="disponibilidadeAgendaPj" name="disponibilidadeAgendaPj" rows="2"
+                  placeholder="Informe a disponibilidade e áreas de atuação"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="mt-4">Análise de Antecedentes</legend>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="consentimentoAntecedentesPj"
+                  name="consentimentoAntecedentesPj" required />
+                <label class="form-check-label" for="consentimentoAntecedentesPj">
+                  Autorizo a realização da análise de antecedentes.
+                </label>
+              </div>
+              <div class="mb-3">
+                <label for="infoAdicionaisHabittaPj" class="form-label">Informações adicionais para verificação (opcional)</label>
+                <textarea class="form-control" id="infoAdicionaisHabittaPj" name="infoAdicionaisHabittaPj" rows="3"
+                  placeholder="Informe se desejar"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="visually-hidden">Aceites Legais</legend>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="aceiteTermosPj" name="aceiteTermosPj" required />
+                <label class="form-check-label" for="aceiteTermosPj">
+                  Aceito os <a href="#" data-bs-toggle="modal" data-bs-target="#modalTermos">Termos de Uso e Serviços -
+                    Habitta</a>.
+                </label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="aceitePoliticaPj" name="aceitePoliticaPj"
+                  required />
+                <label class="form-check-label" for="aceitePoliticaPj">
+                  Aceito a <a href="#" data-bs-toggle="modal" data-bs-target="#modalPolitica">Política de Privacidade da
+                    Habitta</a>.
+                </label>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="aceiteRegrasPj" name="aceiteRegrasPj" required />
+                <label class="form-check-label" for="aceiteRegrasPj">
+                  Aceito as <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegras">Regras e Informações da Habitta</a>.
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-enviar w-100 mt-3">Enviar Cadastro</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
