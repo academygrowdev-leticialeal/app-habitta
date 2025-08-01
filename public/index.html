@@ -1,86 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitta</title>
 
     <!-- CSS Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
     <!-- CSS Projeto -->
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/images/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
   </head>
+
   <body>
-    <!--Incico Nav-->
     <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img class="logo" src="./assets/images/logosemfundo.png" alt="logo" />
-          <a class="project-name" href="#">Habitta</a>
-        </div>
-        <div class="menu" id="menu">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <a href="#como-funciona" class="nav-link">Como Funciona</a>
-            </li>
-            <li class="menu-item">
-              <a href="#beneficios" class="nav-link">Benefícios</a>
-            </li>
-            <li class="menu-item">
-              <a href="#servicos" class="nav-link">Serviços</a>
-            </li>
-            <li class="menu-item">
-              <a href="#" class="nav-link">Login</a>
-            </li>
-          </ul>
-          <a href="#orcamento" class="btn btn-orcamento">Solicitar Orçamento</a>
+      <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="logo">
+                <img src="./assets/images/logo-blue.png" alt="logo">
+                <span class="project-name title">Habitta</span>
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-1">
+              <li class="nav-item">
+                  <a href="#como-funciona" class="nav-link">Como Funciona</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#beneficios" class="nav-link">Benefícios</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#servicos" class="nav-link">Serviços</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a href="#" class="btn btn-login me-2">Login</a>
+              <a href="#orcamento" class="btn btn-default">Cadastrar-se</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
-    <!--Fim Nav-->
 
     <main>
       <!-- Hero -->
       <section class="hero">
         <div class="container">
-          <h1 class="display-5 fw-bold">Você pede</h1>
-          <h2 class="display-6 fw-bold">a Habitta conecta</h2>
-          <p class="lead mt-3">
-            Conectamos você aos melhores prestadores de serviços para reformas,
-            construção e manutenção residencial. Qualidade garantida!
+          <h1 class="display-2 fw-bold">Você pede, <br>a Habitta conecta.</h1>
+          <p class="fs-4 mt-4 mb-5">
+            Conectamos você aos melhores prestadores de serviços para reformas, <br>
+            construção e manutenção residencial. Rápido, seguro e confiável.
           </p>
-          <div class="mt-4">
-            <a href="#orcamento" class="btn btn-orcamento me-2"
-              >Solicitar Orçamento</a
-            >
-            <a href="#servicos" class="btn btn-orcamento">Ver Serviços</a>
+          <div class="mt-4 d-flex justify-content-center gap-3">
+            <a href="./html/cadastro.html" class="btn btn-hero">Encontrar profissionais</a>
+            <a href="#servicos" class="btn btn-hero">Quero ser um prestador</a>
           </div>
         </div>
       </section>
 
       <!-- Como Funciona -->
-      <section class="como_funciona" id="como-funciona">
+      <section class="bg-light" id="como-funciona">
         <div class="container text-center">
-          <h2 class="title fw-bold">Como Funciona</h2>
-          <p class="text-muted mb-4">
-            Em poucos passos você encontra o profissional ideal para seu projeto
+          <h2 class="title fw-bold mb-4 fs-1">Como Funciona</h2>
+          <p class="fs-5 gray-text mb-4">
+            Encontre, contrate e construa. Em poucos passos você encontra o profissional ideal para o seu projeto.
           </p>
           <div class="row g-4 justify-content-center mt-4">
             <!-- Passo 1 -->
@@ -90,59 +81,53 @@
               </div>
               <h5 class="step-title">1. Descreva seu Projeto</h5>
               <p class="step-text">
-                Conte-nos detalhes sobre o serviço que você precisa e onde será
-                realizado.
+                Conte-nos detalhes sobre o serviço que você precisa e onde será realizado.
               </p>
             </div>
-
             <!-- Passo 2 -->
-            <div class="col-12 col-md-3 step">
-              <div class="step-icon">
-                <i class="bi bi-chat-left-text"></i>
-              </div>
-              <h5 class="step-title">2. Receba Orçamento</h5>
-              <p class="step-text">
-                Profissionais qualificados enviarão propostas personalizadas.
-              </p>
-            </div>
-
-            <!-- Passo 3 -->
             <div class="col-12 col-md-3 step">
               <div class="step-icon">
                 <i class="bi bi-toggles2"></i>
               </div>
               <h5 class="step-title">3. Compare e Escolha</h5>
               <p class="step-text">
-                Analise os perfis, avaliações e preços para escolher o melhor
-                profissional.
+                Analise os perfis e avaliações para escolher o melhor profissional.
               </p>
             </div>
-
+            <!-- Passo 3 -->
+            <div class="col-12 col-md-3 step">
+              <div class="step-icon">
+                <i class="bi bi-chat-left-text"></i>
+              </div>
+              <h5 class="step-title">2. Receba o Orçamento</h5>
+              <p class="step-text">
+                Profissionais qualificados enviarão propostas personalizadas.
+              </p>
+            </div>
             <!-- Passo 4 -->
             <div class="col-12 col-md-3 step">
               <div class="step-icon">
                 <i class="bi bi-check2-circle"></i>
               </div>
-              <h5 class="step-title">3. Contrate com Segurança</h5>
+              <h5 class="step-title">4. Contrate com Segurança</h5>
               <p class="step-text">
-                Finalize a contratação e acompanhe o andamento do seu projeto.
+                Finalize a contratação e acompanhe o andamento do serviço.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!--Nossos Beneficios-->
+      <!-- Beneficios -->
       <section id="beneficios">
-        <div class="container-xl py-5">
+        <div class="container-lg">
           <div class="row">
             <div class="col-12 text-center mb-3">
               <h2 class="title fw-bold fs-1">Por que Escolher a Habitta?</h2>
             </div>
-            <div class="col-12 text-center mb-5">
-              <p class="card-text fs-5">
-                Oferecemos a melhor experiência para conectar clientes e
-                profissionais de forma segura e eficiente.
+            <div class="col-12 text-center mb-4">
+              <p class="gray-text fs-5">
+                Oferecemos a melhor experiência para conectar clientes e profissionais de forma segura e eficiente.
               </p>
             </div>
           </div>
@@ -156,9 +141,8 @@
                 <h5 class="mb-2 fw-semibold fs-5 title">
                   Profissionais Verificados
                 </h5>
-                <p class="card-text mb-0">
-                  Todos os prestadores passam por verificação de documentos e
-                  qualificações.
+                <p class="gray-text mb-0">
+                  Todos os prestadores passam por verificação de documentos e qualificações.
                 </p>
               </div>
             </div>
@@ -169,9 +153,8 @@
                   <i class="bi bi-clock"></i>
                 </div>
                 <h5 class="mb-2 fw-semibold fs-5 title">Rapidez na Resposta</h5>
-                <p class="card-text mb-0">
-                  Receba propostas em até 24 horas e encontre disponibilidade
-                  imediata.
+                <p class="gray-text mb-0">
+                  Receba propostas em até 24 horas e encontre disponibilidade imediata.
                 </p>
               </div>
             </div>
@@ -184,9 +167,8 @@
                 <h5 class="mb-2 fw-semibold fs-5 title">
                   Plataforma Intuitiva
                 </h5>
-                <p class="card-text mb-0">
-                  Interface simples e fácil de usar, disponível em qualquer
-                  dispositivo.
+                <p class="gray-text mb-0">
+                  Interface simples e fácil de usar, disponível em qualquer dispositivo.
                 </p>
               </div>
             </div>
@@ -197,9 +179,8 @@
                   <i class="bi bi-star"></i>
                 </div>
                 <h5 class="mb-2 fw-semibold fs-5 title">Avaliações Reais</h5>
-                <p class="card-text mb-0">
-                  Sistema de avaliações transparente com feedbacks de clientes
-                  reais.
+                <p class="gray-text mb-0">
+                  Sistema de avaliações transparente com feedbacks de clientes reais.
                 </p>
               </div>
             </div>
@@ -210,9 +191,8 @@
                   <i class="bi bi-wallet2"></i>
                 </div>
                 <h5 class="mb-2 fw-semibold fs-5 title">Pagamento Seguro</h5>
-                <p class="card-text mb-0">
-                  Sistema de pagamento protegido com diversas opções de
-                  pagamento.
+                <p class="gray-text mb-0">
+                  Sistema de pagamento protegido com diversas opções de pagamento.
                 </p>
               </div>
             </div>
@@ -223,9 +203,8 @@
                   <i class="bi bi-chat-right-text"></i>
                 </div>
                 <h5 class="mb-2 fw-semibold fs-5 title">Suporte Dedicado</h5>
-                <p class="card-text mb-0">
-                  Nossa equipe está sempre disponível para ajudar você e
-                  resolver dúvidas.
+                <p class="gray-text mb-0">
+                  Nossa equipe está sempre disponível para ajudar você e resolver dúvidas.
                 </p>
               </div>
             </div>
@@ -234,24 +213,24 @@
       </section>
 
       <!-- Serviços -->
-      <section class="py-5 bg-light" id="servicos">
+      <section class="bg-light" id="servicos">
         <div class="container text-center">
-          <h2 class="fw-bold mb-3">Serviços</h2>
-          <p class="text-muted mb-4">
-            Confira nossos serviços e escolha o ideal para você
+          <h2 class="title fw-bold fs-1 mb-4">Serviços</h2>
+          <p class="fs-5 gray-text mb-4">
+            Confira os serviços disponíveis na nossa plataforma e escolha o ideal para você.
           </p>
-          <div class="row g-4">
+          <div class="row g-4 py-3">
+            <!-- Card 1 -->
             <div class="col-md-6 col-xl-4 text-center">
               <div class="card h-100 p-4 align-items-center">
-                <div class="card-circle mb-3">
+                <div class="mb-2 service-icon">
                   <i class="bi bi-bricks fs-1"></i>
                 </div>
-                <h5 class="fw-bold">Construção e Alvenaria</h5>
-                <p>
-                  Construção de paredes, muros, fundações com materiais de
-                  qualidade.
+                <h5 class="fw-bold fs-4 title py-2">Construção e Alvenaria</h5>
+                <p class="mb-4 px-2 gray-text">
+                  Construção de paredes, muros, fundações com materiais de qualidade.
                 </p>
-                <ul class="text-start">
+                <ul class="text-start gray-text w-100">
                   <li>Paredes e divisórias</li>
                   <li>Muros e cercas</li>
                   <li>Fundações</li>
@@ -259,17 +238,17 @@
                 </ul>
               </div>
             </div>
+            <!-- Card 2 -->
             <div class="col-md-6 col-xl-4 text-center">
               <div class="card h-100 p-4 align-items-center">
-                <div class="card-circle mb-3">
+                <div class="mb-2 service-icon">
                   <i class="bi bi-house fs-1"></i>
                 </div>
-                <h5 class="fw-bold">Telhados e Coberturas</h5>
-                <p>
-                  Instalação, reparo e manutenção de telhados com diversos
-                  materiais.
+                <h5 class="fw-bold fs-4 title py-2">Telhados e Coberturas</h5>
+                <p class="mb-4 px-2 gray-text">
+                  Instalação, reparo e manutenção de telhados com diversos materiais.
                 </p>
-                <ul class="text-start">
+                <ul class="text-start gray-text w-100">
                   <li>Instalação de telhados</li>
                   <li>Troca de telhas</li>
                   <li>Calhas e rufos</li>
@@ -277,15 +256,17 @@
                 </ul>
               </div>
             </div>
-
+            <!-- Card 3 -->
             <div class="col-md-6 col-xl-4 text-center">
               <div class="card h-100 p-4 align-items-center">
-                <div class="card-circle mb-3">
+                <div class="mb-2 service-icon">
                   <i class="bi bi-tools fs-1"></i>
                 </div>
-                <h5 class="mb-2 fw-semibold fs-5 title">Manutenção Geral</h5>
-                <p>Serviços diversos para manter sua casa em ordem.</p>
-                <ul class="text-start">
+                <h5 class="fw-bold fs-4 title py-2">Manutenção Geral</h5>
+                <p class="mb-4 px-2 gray-text">
+                  Serviços diversos para manter sua casa em ordem.
+                </p>
+                <ul class="text-start gray-text w-100">
                   <li>Pintura residencial</li>
                   <li>Elétrica básica</li>
                   <li>Hidráulica</li>
@@ -296,119 +277,76 @@
           </div>
         </div>
       </section>
-
-      <!--Footer-->
-
-      <footer class="footer text-light py-5 mt-5">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-md-3">
-              <h5 class="fw-bold">Habitta</h5>
-              <p class="small">Você pede a Habitta conecta.</p>
-            </div>
-
-            <!-- Serviços -->
-            <div class="col-md-3">
-              <h6 class="fw-bold">Serviços</h6>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Construção</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Telhados</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Manutenção</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Pintura</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Empresa -->
-            <div class="col-md-3">
-              <h6 class="fw-bold">Empresa</h6>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Sobre nós
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Como funciona
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Seja um profissional</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-light text-decoration-none small"
-                    >Contato</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contato -->
-            <div class="col-md-3">
-              <h6 class="fw-bold">Contato</h6>
-              <ul class="list-unstyled small">
-                <li>
-                  <a
-                    href="mailto:contato@habitta.com.br"
-                    class="text-light text-decoration-none"
-                    >contato@habitta.com.br</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="tel:+5553991962807"
-                    class="text-light text-decoration-none"
-                    >5553991962807</a
-                  >
-                </li>
-                <li>Pelotas, RS</li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-light text-decoration-none"
-                  >
-                    <i class="bi bi-instagram fs-3"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <hr class="border-secondary my-4" />
-
-          <div class="text-center small text-secondary">
-            © 2025 Habitta. Todos os direitos reservados.
-          </div>
-        </div>
-      </footer>
     </main>
 
+    <footer class="footer text-light py-5">
+      <div class="container">
+        <div class="row px-2">
+          <div class="col-md-4">
+            <h5 class="fw-bold">Habitta</h5>
+            <p class="small">Você pede, a Habitta conecta.</p>
+            <div class="d-flex gap-2">
+              <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA==" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none">
+                <i class="bi bi-instagram fs-4"></i>
+              </a>
+              <a href="https://wa.me/5553991962807" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none">
+                <i class="bi bi-whatsapp fs-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <div>
+              <h6 class="fw-bold">Links úteis</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-light text-decoration-none small">Regras e informações</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none small">Termos de Uso</a>
+                </li>
+                <li>
+                  <a href="#" class="text-light text-decoration-none small">Política de privacidade</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-end">
+            <div>
+              <h6 class="fw-bold" id="contato">Contato</h6>
+              <ul class="list-unstyled small">
+                <li>
+                  <a href="mailto:contato@habitta.com.br" class="text-light text-decoration-none d-flex gap-2 mb-1">
+                    <i class="bi bi-envelope"></i>
+                    <span>contato@habitta.com.br</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+5553991962807" class="text-light text-decoration-none d-flex gap-2 mb-1">
+                    <i class="bi bi-telephone"></i>
+                    <span>+55 (53) 99196-2807</span>
+                  </a>
+                </li>
+                <li>
+                  <div class="text-light text-decoration-none d-flex gap-2 mb-1">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Pelotas, RS</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center small copyright">
+          © 2025 Habitta. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
     <!-- JS Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
     <!-- JS Projeto -->
     <script src="./js/index.js"></script>

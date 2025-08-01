@@ -1,5 +1,18 @@
 @import url('./global.css');
 
+.title {
+  color: var(--primary-blue);
+  font-family: var(--font-title);
+}
+
+.gray-text {
+  color: var(--secondary-gray);
+}
+
+section {
+  padding: 80px 20px;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -7,102 +20,105 @@
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 100px;
-  background-color: white; 
-  z-index: 1000; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 15px 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: left;
+  gap: 6px;
 }
 
 .logo img {
-  width: 100px;
-  height: 100px;
+  height: 1.8rem;
+  padding-bottom: 4px;
 }
 
 .project-name {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: var(--primary-blue);
   text-decoration: none;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.nav-link {
+  color: var(--primary-blue);
+  font-weight: 500;
 }
 
-.menu-list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
+.navbar-toggler {
+  --bs-navbar-toggler-font-size: 1rem;
+  --bs-navbar-toggler-focus-width: 0;
+  color: var(--primary-blue);
+  border: none;
   padding: 0;
 }
 
-.menu-item a {
-  text-decoration: none;
-  color:  var(--primary-blue);
-  font-weight: 500;
-  font-size: 16px;
-}
-
-/* Botoes */
-
-.btn-orcamento {
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-orcamento:hover {
-    background: #718091;
-    color: white;
-}
+/* SECTION - HERO */
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('/app-habitta/public/assets/images/logosemfundo.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 300px 20px; /* antes era 300px */
-    text-align: center;
-   
-
-}
-
-
-/*Como Funciona*/
-
-.como_funciona {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, hsla(210, 53%, 20%, 0.95), hsl(210 52% 15% / .95)), url('../assets/images/obra.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   text-align: center;
 }
 
-.como_funciona .title {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 10px;
+.hero p {
+  line-height: 1.5;
 }
 
-.como_funciona p {
-  font-size: 1rem;
-  color: #666;
+/* BOTÕES */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
+
+.btn-default {
+  background-color: var(--primary-blue);
+  color: white;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .3s;
+}
+
+.btn-default:hover {
+  background-color: #14273e;
+  color: white;
+  transform: scale(1.04);
+}
+
+.btn-hero {
+  background-color: #14273e;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  color: white;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .3s;
+  border: 1px solid #ffffff25;
+}
+
+.btn-hero:hover {
+  background-color: #ffffff10;
+  border: 1px solid #ffffff25;
+  transform: translateY(-3px);
+}
+
+.btn-login {
+  color: var(--primary-blue);
+  background-color: #e0ebf5;
+  transition: background-color .3s;
+}
+
+.btn-login:hover {
+  background-color: hsl(209, 51%, 88%);
+}
+
+/* SECTION -  COMO FUNCIONA */
 
 .step {
   text-align: center;
@@ -110,11 +126,11 @@
 }
 
 .step-icon {
-  width: 60px;
-  height: 60px;
-  background-color: #fff; 
-  color: var(--primary-blue); 
-  font-size: 32px;
+  width: 75px;
+  height: 75px;
+  background-color: var(--primary-blue); 
+  color: white; 
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,32 +142,33 @@
 
 .step:hover .step-icon {
   background-color: var(--primary-blue);
-  color: #fff;
+  transform: scale(1.08);
 }
 
-
 .step-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-blue);
   margin-bottom: 0.5rem;
-}
-
-.step-text {
-  color:  var(--primary-blue);
-  font-size: 0.95rem;
-}
-
-
-/* SECTION - BENEFICIOS */
-
-.title {
-  color: var(--primary-blue);
   font-family: var(--font-title);
 }
 
-.card-text {
+.step-text {
   color: var(--secondary-gray);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* SECTION - BENEFICIOS */
+
+.card {
+  transition: transform .25s ease-out, box-shadow .25s ease-out;
+  border-color: #e2e6e9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .2);
 }
 
 .card-circle {
@@ -172,26 +189,18 @@
   color: #ffffff;
 }
 
-.card {
-  transition: transform .25s ease-out, box-shadow .25s ease-out;
-  border-color: #e2e6e9;
+.service-icon {
+  color: #1f3d63;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .2);
+/* FOOTER */
+
+.footer {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px 0;
 }
 
-/*Footer*/
-
-.footer{
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 20px 0;
-   
+.footer a:hover, .copyright {
+  color: #c0c0c0 !important; 
 }
-footer a:hover {
-color: var(--secondary-gray) !important; 
-}
-
-
