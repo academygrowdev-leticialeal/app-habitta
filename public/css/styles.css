@@ -1,5 +1,9 @@
 @import url('./global.css');
 
+html {
+  scroll-padding-top: 50px;
+}
+
 .title {
   color: var(--primary-blue);
   font-family: var(--font-title);
@@ -73,6 +77,10 @@ section {
   line-height: 1.5;
 }
 
+.max-w {
+  max-width: 700px;
+}
+
 /* BOTÕES */
 
 .btn {
@@ -94,7 +102,7 @@ section {
 }
 
 .btn-hero {
-  background-color: #14273e;
+  background-color: #14273ec0;
   padding: 15px 25px;
   font-size: 1.1rem;
   color: white;
@@ -203,4 +211,20 @@ section {
 
 .footer a:hover, .copyright {
   color: #c0c0c0 !important; 
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group a:first-child {
+    background-color: #ffffff10;
+  }
+
+  .hero p, .hero h1 {
+    text-align: start;
+  }
 }
