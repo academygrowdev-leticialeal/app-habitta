@@ -4,59 +4,12 @@ html {
   scroll-padding-top: 50px;
 }
 
-.title {
-  color: var(--primary-blue);
-  font-family: var(--font-title);
-}
-
 .gray-text {
   color: var(--secondary-gray);
 }
 
 section {
   padding: 80px 20px;
-}
-
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 20px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  gap: 6px;
-}
-
-.logo img {
-  height: 1.8rem;
-  padding-bottom: 4px;
-}
-
-.project-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--primary-blue);
-  text-decoration: none;
-}
-
-.nav-link {
-  color: var(--primary-blue);
-  font-weight: 500;
-}
-
-.navbar-toggler {
-  --bs-navbar-toggler-font-size: 1rem;
-  --bs-navbar-toggler-focus-width: 0;
-  color: var(--primary-blue);
-  border: none;
-  padding: 0;
 }
 
 /* SECTION - HERO */
@@ -81,26 +34,6 @@ section {
   max-width: 700px;
 }
 
-/* BOTÕES */
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.btn-default {
-  background-color: var(--primary-blue);
-  color: white;
-  transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .3s;
-}
-
-.btn-default:hover {
-  background-color: #14273e;
-  color: white;
-  transform: scale(1.04);
-}
-
 .btn-hero {
   background-color: #14273ec0;
   padding: 15px 25px;
@@ -114,16 +47,6 @@ section {
   background-color: #ffffff10;
   border: 1px solid #ffffff25;
   transform: translateY(-3px);
-}
-
-.btn-login {
-  color: var(--primary-blue);
-  background-color: #e0ebf5;
-  transition: background-color .3s;
-}
-
-.btn-login:hover {
-  background-color: hsl(209, 51%, 88%);
 }
 
 /* SECTION -  COMO FUNCIONA */
@@ -199,18 +122,6 @@ section {
 
 .service-icon {
   color: #1f3d63;
-}
-
-/* FOOTER */
-
-.footer {
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 20px 0;
-}
-
-.footer a:hover, .copyright {
-  color: #c0c0c0 !important; 
 }
 
 /* MEDIA QUERY */
