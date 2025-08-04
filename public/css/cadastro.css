@@ -1,45 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('./global.css');
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #f5f6fa;
-  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-blue);
 }
+
 .auth-container {
-  min-height: 95vh;
-  background-color: #14273e;
+  min-height: 100vh;
   color: white;
   display: flex;
-  flex-direction: column;
-  padding: 4rem 1rem 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 1rem;
 }
-.title {
+
+.register-title {
+  font-family: var(--font-title);
   text-align: center;
   font-size: 2.5rem;
 }
-.subtitle {
+
+.register-subtitle {
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 300;
   font-size: 1.5rem;
 }
+
 .title-cards {
   font-size: 1.8rem;
 }
+
 .card-option p,
 .card-option ul {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .list-card {
   margin-bottom: 0.5rem;
   color: #333;
+  padding-left: 10px;
 }
+
 .card-option {
   border: none;
   border-radius: 7px;
@@ -52,13 +54,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .card-option:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 .card-option .icon {
   font-size: 2rem;
-  background-color: #14273e;
+  background-color: var(--primary-blue);
   color: white;
   width: 60px;
   height: 60px;
@@ -68,24 +72,25 @@ body {
   justify-content: center;
   margin: 0 auto 1rem;
 }
+
 .btn-primary {
-  background-color: #14273e;
+  background-color: var(--primary-blue);
   border: none;
+  --bs-focus-ring-width: 0;
+  --bs-btn-active-bg: #e0ebf5;
+  --bs-btn-active-color: var(--primary-blue);
 }
+
 .btn-primary:hover {
-  background-color: #8d8d8d;
+  background-color: #14273e;
+  color: white
 }
-.btn-back {
-  color: #14273e;
-  font-size: 0.9rem;
-  text-decoration: none;
-  display: inline-block;
-  margin: 1rem;
-}
-.btn-back:hover {
-  text-decoration: underline;
-}
+
 @media (max-width: 767px) {
+  .auth-container {
+    padding-top: 100px;
+  }
+
   .subtitle {
     margin-bottom: 2rem;
   }
