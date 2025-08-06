@@ -1,0 +1,54 @@
+@import url(./global.css);
+
+body {
+  padding-top: 80px;
+  line-height: 1.75;
+}
+
+main {
+  padding: 0 .5rem;
+  font-size: 18px;
+  text-align: justify;
+  color: #333333;
+  font-weight: light;
+  word-wrap: break-word;
+  max-width: 980px;
+  margin: auto;
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+main h2 {
+  font-size: 1.5rem;
+}
+
+.ul-primary {
+  margin-bottom: 1.5rem;
+}
+
+.ul-primary > li {
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.ul-secondary {
+  padding-left: 1.5rem;
+}
+
+.ul-secondary > li {
+  list-style-type: circle;
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+@media (max-width: 500px) {
+  main {
+    font-size: 1rem;
+  }
+
+  main li h2 {
+  font-size: 18px;
+  }
+}
