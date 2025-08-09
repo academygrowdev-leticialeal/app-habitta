@@ -14,8 +14,9 @@
 
 @font-face {
   font-family: 'Aileron';
-  src: url('../assets/fonts/Aileron-Light.otf') format('opentype');
-  font-weight: 300;
+  src: url('../assets/fonts/Aileron-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
 }
 
 :root {
