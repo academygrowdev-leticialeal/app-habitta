@@ -1,0 +1,222 @@
+@import url('./global.css');
+
+html {
+  scroll-padding-top: 50px;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.gray-text {
+  color: var(--secondary-gray);
+  line-height: 1.7;
+}
+
+.text-alignment {
+  text-align: center;
+}
+
+.float-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* SECTION - HERO */
+
+.hero {
+  background: linear-gradient(135deg, hsla(210, 53%, 20%, 0.95), hsl(210 52% 15% / .95)), url('../assets/images/obra.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.max-w {
+  max-width: 680px;
+}
+
+.btn-hero {
+  background-color: #14273ec0;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  color: white;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), background-color .3s;
+  border: 1px solid #ffffff25;
+}
+
+.btn-hero:hover {
+  background-color: #ffffff10;
+  border: 1px solid #ffffff25;
+  transform: translateY(-3px);
+}
+
+/* SECTION -  COMO FUNCIONA */
+
+.step {
+  text-align: center;
+  padding: 1rem;
+}
+
+.step-icon {
+  width: 75px;
+  height: 75px;
+  background-color: var(--primary-blue); 
+  color: white; 
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.step:hover .step-icon {
+  background-color: var(--primary-blue);
+  transform: scale(1.08);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-title);
+}
+
+.step-text {
+  color: var(--secondary-gray);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+/* SECTION - BENEFICIOS */
+
+.card {
+  transition: transform .25s ease-out, box-shadow .25s ease-out;
+  border-color: #e2e6e9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, .2);
+}
+
+.card-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.75rem;
+  color: var(--primary-blue);
+  background-color: #e0ebf5;
+  transition: background-color .25s, color .25s;
+}
+
+.card:hover .card-circle {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+/* SECTION - SERVIÇOS */
+
+.service-icon {
+  color: var(--primary-blue);
+  font-size: 2.8rem;
+  padding: 5px;
+  text-align: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  background-color: #e0ebf5;
+  border: 1px solid #14273e33;
+  border-radius: 5px;
+}
+
+.service-card > div {
+  font-size: 2rem;
+}
+
+.service-card > h5 {
+  text-align: left;
+}
+
+.service-card:hover {
+  background-color: hsl(210, 48%, 88%);
+}
+
+#servicos .card {
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+#servicos .card:hover {
+  box-shadow: none;
+}
+
+/* SECTION - DEPOIMENTOS */
+
+.photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;       
+  object-fit: cover;         
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+  color: #808080e0;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group a:first-child {
+    background-color: #ffffff10;
+  }
+
+  .float-btn {
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .step-text {
+    text-align: center;
+  }
+
+  .text-alignment {
+    text-align: left;
+  }
+}
