@@ -2,7 +2,6 @@
 
 body {
   padding-top: 80px;
-  line-height: 1.75;
 }
 
 main {
@@ -14,6 +13,7 @@ main {
   word-wrap: break-word;
   max-width: 980px;
   margin: auto;
+  line-height: 1.75;
 }
 
 main p {
