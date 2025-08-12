@@ -43,12 +43,26 @@ main h2 {
   margin-top: .5rem;
 }
 
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--primary-blue);
+}
+
+.nav-pills .nav-link {
+  background-color: #80808028;
+  color: var(--secondary-gray);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  color: white;
+  background-color: #8080806b;
+}
+
 @media (max-width: 500px) {
   main {
     font-size: 1rem;
   }
 
   main li h2 {
-  font-size: 18px;
+    font-size: 1.125rem;
   }
 }
