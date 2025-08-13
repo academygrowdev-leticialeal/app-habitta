@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/cadastro-global.css" />
-    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
-    <title>Cadastro do Profissional</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do Profissional</title>
+
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS Projeto -->
+  <link rel="stylesheet" href="../css/cadastro-global.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 </head>
+
 <body>
   <div class="d-flex flex-wrap w-100 vh-100">
     <!-- Painel esquerdo (tela azul) -->
     <div class="col-12 col-md-5 bg-painel d-flex justify-content-center align-items-center p-4">
       <div class="painel-initial text-white text-center d-flex flex-column align-items-center justify-content-center h-100 w-100">
-        <img class="mb-4 photo-logo" src="../assets/images/logo-white.png" alt="Logo"/>
+        <img class="mb-4 photo-logo" src="../assets/images/logo-white.png" alt="Logo">
         <h2 class="fw-bold mb-3 fs-1">Bem-vindo à Habitta</h2>
         <p class="mb-4 small-text text-start">
-          Aqui você encontra soluções práticas e seguras para o seu lar.<br />
+          Aqui você encontra soluções práticas e seguras para o seu lar.<br>
           Conectamos você aos melhores serviços com confiança e facilidade.
         </p>
-        <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-2">ENTRAR</a>
+        <a href="./login.html" class="btn btn-outline-light rounded-pill px-4 py-2">ENTRAR</a>
       </div>
     </div>
+
     <!-- Painel direito (formulário) -->
     <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-4">
       <div class="form-box w-100">
-        <!-- Abas -->
-        <div class=" title-form text-center mb-4">
+        <div class="title-form text-center mb-4">
           <h2>Cadastro do Profissional</h2>
         </div>
-        <!-- Conteúdo das Abas -->
-        <div class="tab-content">
-          <!-- Aba Cadastro -->
-          <div class="tab-pane fade show active" id="signup" role="tabpanel">
-            <form id="form-profissional" method="POST">
-                <!-- Pessoa Física / Jurídica -->
-                <div class="mb-3">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="PF" checked>
-                    <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="PJ">
-                    <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
-                </div>
-                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="type" id="pessoaMei" value="MEI">
-                    <label class="form-check-label" for="pessoaJuridica">MEI</label>
-                </div>
-                </div>
-            <!-- Nome / Razão Social -->
-                <div class="mb-3">
-                    <input type="text" class="form-control input-custom" id="nomeInput" name="name" placeholder="Nome completo" required>
-                </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control input-custom" id="documentField" name="document" placeholder="CPF" required>
-                </div> 
-                <div class="mb-3">
-                    <input type="text" class="form-control input-custom" name="phone" placeholder="Telefone" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control input-custom" name="email" placeholder="Email" required>
-                </div>
-                <div class="mb-4">
-                    <input type="password" class="form-control input-custom" name="password" placeholder="Senha" required>
-                </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="termsCheck" required>
-                <label class="form-check-label" for="termsCheck">
-                    Ao criar sua conta, você concorda com os 
-                    <a href="" target="_blank">Termos de Uso</a> e a 
-                    <a href="" target="_blank">Política de Privacidade</a> da Habitta.
-                </label>
-              </div>
-              <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">Cadastrar-se</button>
-            </form>
-            <div class="form-footer mt-3 text-center">
-              <a href="login.html">Você já tem uma conta?</a>
+        <form id="register-form">
+          <!-- Pessoa Física / Jurídica / MEI -->
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="PF" checked>
+              <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="PJ">
+              <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
+            </div>
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="mei" value="MEI">
+              <label class="form-check-label" for="mei">MEI</label>
             </div>
           </div>
+          <!-- Nome / Razão Social -->
+          <div class="mb-3">
+            <input type="text" class="form-control input-custom" id="nameInput" name="name" placeholder="Nome completo" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control input-custom" id="documentField" name="document" placeholder="CPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}" maxlength="14" required>
+          </div> 
+          <div class="mb-3">
+            <input type="text" class="form-control input-custom" id="phoneInput" name="phone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control input-custom" name="email" placeholder="Email" required>
+          </div>
+          <div class="mb-4">
+            <input type="password" class="form-control input-custom" name="password" placeholder="Senha" minlength="6" required>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">
+              Ao criar sua conta, você concorda com os 
+              <a href="./termos-de-uso.html?tab=profissionais" target="_blank">Termos de Uso</a> e a 
+              <a href="./politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da Habitta.
+            </label>
+          </div>
+          <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">Cadastrar-se</button>
+        </form>
+        <div class="form-footer mt-3 text-center">
+          Já tem uma conta? <a href="./login.html">Faça login.</a>
         </div>
-        <!-- Login com redes sociais -->
+        <!-- Redes sociais -->
         <div class="social-login text-center mt-4">
           <button class="btn btn-social me-2"><i class="bi bi-facebook"></i></button>
           <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA==" target="_blank" rel="noopener noreferrer" class="btn btn-social">
@@ -91,7 +92,11 @@
       </div>
     </div>
   </div>
-  <script src="../js/cadastro-global.js" ></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- JS Projeto -->
+  <script src="../js/cadastro-global.js"></script>
 </body>
 </html>
