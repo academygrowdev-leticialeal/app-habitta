@@ -22,12 +22,12 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <div class="logo">
-                <img src="./assets/images/logo-blue.png" alt="logo">
-                <span class="title">Habitta</span>
+              <img src="./assets/images/logo-blue.png" alt="logo">
+              <span class="title">Habitta</span>
             </div>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mb-2 mb-lg-0 mx-auto gap-1">
@@ -39,6 +39,9 @@
               </li>
               <li class="nav-item">
                 <a href="#servicos" class="nav-link">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
               </li>
             </ul>
             <div class="d-flex flex-column flex-sm-row gap-2">
@@ -53,64 +56,73 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="container">
-          <h1 class="display-2 fw-bold">Você pede, <br>a Habitta conecta.</h1>
-          <p class="fs-4 mt-4 mb-5 max-w mx-auto">
-            Conectamos você aos melhores prestadores de serviços para reformas, 
-            construção e manutenção residencial de forma rápida, segura e confiável.
+        <div class="container pt-5">
+          <h1 class="display-2 fw-bold text-alignment">Você pede, <br>a Habitta conecta.</h1>
+          <p class="fs-4 mt-4 mb-5 max-w mx-auto text-start">
+            Conectamos você aos melhores profissionais para suas obras, reformas e reparos, de forma rápida e segura!
           </p>
           <div class="mt-4 d-flex justify-content-center gap-3 button-group">
-            <a href="./html/cadastro.html" class="btn btn-hero">Encontrar profissionais</a>
-            <a href="./html/cadastro.html" class="btn btn-hero">Quero ser um prestador</a>
+            <a href="./html/cadastro-cliente.html" class="btn btn-hero" target="_blank">
+              Encontrar profissionais
+            </a>
+            <a href="./html/cadastro-profissional.html" class="btn btn-hero" target="_blank">
+              Quero ser um prestador
+            </a>
           </div>
         </div>
       </section>
 
       <!-- Como Funciona -->
       <section class="bg-light" id="como-funciona">
-        <div class="container text-center">
-          <h2 class="title fw-bold mb-4 fs-1">Como Funciona</h2>
-          <p class="fs-5 gray-text mb-4">
-            Encontre, contrate e construa. Em poucos passos você encontra o profissional ideal para o seu projeto.
-          </p>
-          <div class="row g-4 justify-content-center mt-4">
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-12 text-alignment mb-3">
+              <h2 class="title fw-bold fs-1">Como Funciona</h2>
+            </div>
+            <div class="col-12 text-alignment mb-4">
+              <p class="gray-text fs-5">
+                Encontre, contrate e construa. Em poucos passos você encontra o profissional ideal para o seu serviço.
+              </p>
+            </div>
+          </div>
+          <div class="row g-4 justify-content-center">
             <!-- Passo 1 -->
-            <div class="col-12 col-md-3 step">
+            <div class="col-12 col-md-6 col-lg-3 step">
               <div class="step-icon">
                 <i class="bi bi-search"></i>
               </div>
-              <h5 class="step-title">1. Descreva seu Projeto</h5>
-              <p class="step-text">
+              <h5 class="step-title">1. Descreva seu Serviço</h5>
+              <p class="step-text px-3">
                 Conte-nos detalhes sobre o serviço que você precisa e onde será realizado.
               </p>
             </div>
             <!-- Passo 2 -->
-            <div class="col-12 col-md-3 step">
+            <div class="col-12 col-md-6 col-lg-3 step">
               <div class="step-icon">
                 <i class="bi bi-toggles2"></i>
               </div>
               <h5 class="step-title">2. Compare e Escolha</h5>
-              <p class="step-text">
-                Analise os perfis e avaliações para escolher o melhor profissional.
+              <p class="step-text px-3">
+                Analise os perfis e as avaliações dos profissionais para escolher o melhor para o seu serviço.
               </p>
             </div>
             <!-- Passo 3 -->
-            <div class="col-12 col-md-3 step">
+            <div class="col-12 col-md-6 col-lg-3 step">
               <div class="step-icon">
                 <i class="bi bi-chat-left-text"></i>
               </div>
               <h5 class="step-title">3. Receba o Orçamento</h5>
-              <p class="step-text">
-                Profissionais qualificados enviarão propostas personalizadas.
+              <p class="step-text px-3">
+                O profissional escolhido enviará uma proposta personalizada para o seu serviço.
               </p>
             </div>
             <!-- Passo 4 -->
-            <div class="col-12 col-md-3 step">
+            <div class="col-12 col-md-6 col-lg-3 step">
               <div class="step-icon">
                 <i class="bi bi-check2-circle"></i>
               </div>
               <h5 class="step-title">4. Contrate com Segurança</h5>
-              <p class="step-text">
+              <p class="step-text px-3">
                 Finalize a contratação e acompanhe o andamento do serviço.
               </p>
             </div>
@@ -118,20 +130,20 @@
         </div>
       </section>
 
-      <!-- Beneficios -->
+      <!-- Benefícios -->
       <section id="beneficios">
         <div class="container-lg">
           <div class="row">
-            <div class="col-12 text-center mb-3">
+            <div class="col-12 mb-3 text-alignment">
               <h2 class="title fw-bold fs-1">Por que Escolher a Habitta?</h2>
             </div>
-            <div class="col-12 text-center mb-4">
+            <div class="col-12 mb-4 text-alignment">
               <p class="gray-text fs-5">
                 Oferecemos a melhor experiência para conectar clientes e profissionais de forma segura e eficiente.
               </p>
             </div>
           </div>
-          <div class="row py-4 px-2 g-4">
+          <div class="row pb-4 px-2 g-4">
             <!-- Card 1 -->
             <div class="col-md-6 col-xl-4 text-center">
               <div class="card h-100 p-4 align-items-center">
@@ -214,64 +226,163 @@
 
       <!-- Serviços -->
       <section class="bg-light" id="servicos">
-        <div class="container text-center">
-          <h2 class="title fw-bold fs-1 mb-4">Serviços</h2>
-          <p class="fs-5 gray-text mb-4">
-            Confira os serviços disponíveis na nossa plataforma e escolha o ideal para você.
-          </p>
-          <div class="row g-4 py-3">
-            <!-- Card 1 -->
-            <div class="col-md-6 col-xl-4 text-center">
-              <div class="card h-100 p-4 align-items-center">
-                <div class="mb-2 service-icon">
-                  <i class="bi bi-bricks fs-1"></i>
+        <div class="container-md px-xl-5">
+          <div class="row justify-content-center">
+            <div class="col-12 text-alignment mb-3">
+              <h2 class="title fw-bold fs-1">Serviços</h2>
+            </div>
+            <div class="col-12 text-alignment mb-4">
+              <p class="fs-5 gray-text">
+                Conectamos você aos profissionais certos para cada serviço. Encontre abaixo a solução ideal para sua obra, reforma ou manutenção.
+              </p>
+            </div>
+          </div>
+          <div class="row pb-3 g-3 justify-content-center">
+            <!-- Categoria 1 -->
+            <div class="col-6 col-sm-3 col-md-3 text-center">
+              <div class="card h-100 p-3 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-house"></i>
                 </div>
-                <h5 class="fw-bold fs-4 title py-2">Construção e Alvenaria</h5>
-                <p class="mb-4 px-2 gray-text">
-                  Construção de paredes, muros, fundações com materiais de qualidade.
+                <h5 class="fw-semibold title fs-6 mb-3">Residencial</h5>
+              </div>
+            </div>
+            <!-- Categoria 2 -->
+            <div class="col-6 col-sm-3 col-md-3 text-center">
+              <div class="card h-100 p-3 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-buildings"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 mb-3">Empresarial</h5>
+              </div>
+            </div>
+            <!-- Categoria 3 -->
+            <div class="col-6 col-sm-3 col-md-3 text-center">
+              <div class="card h-100 p-3 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-shop"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 mb-3">Comercial</h5>
+              </div>
+            </div>
+            <!-- Categoria 4 -->
+            <div class="col-6 col-sm-3 col-md-3 text-center">
+              <div class="card h-100 p-3 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-houses"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 mb-3">Condomínios</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 pb-3">
+            <!-- Serviço 1 -->
+            <div class="col-12 col-md-6">
+              <div class="service-card h-100 py-3 px-4 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-bricks"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 m-0">Construção e reforma</h5>
+              </div>
+            </div>
+            <!-- Serviço 2 -->
+            <div class="col-12 col-md-6">
+              <div class="service-card h-100 py-3 px-4 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-paint-bucket"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 m-0">Pintura e Acabamentos</h5>
+              </div>
+            </div>
+            <!-- Serviço 3 -->
+            <div class="col-12 col-md-6">
+              <div class="service-card h-100 py-3 px-4 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-lightning-charge"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 m-0">Serviços Elétricos</h5>
+              </div>
+            </div>
+            <!-- Serviço 4 -->
+            <div class="col-12 col-md-6">
+              <div class="service-card h-100 py-3 px-4 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-droplet"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 m-0">Serviços Hidráulicos</h5>
+              </div>
+            </div>
+            <!-- Serviço 5 -->
+            <div class="col-12 col-md-6">
+              <div class="service-card h-100 py-3 px-4 align-items-center">
+                <div class="service-icon">
+                  <i class="bi bi-tools"></i>
+                </div>
+                <h5 class="fw-semibold title fs-6 m-0">Manutenção Geral e Reparos</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Depoimentos -->
+      <section id="depoimentos">
+        <div class="container-md px-xl-5">
+          <div class="row">
+            <div class="col-12 text-alignment mb-3">
+              <h2 class="title fw-bold fs-1">O que Nossos Clientes Dizem?</h2>
+            </div>
+            <div class="col-12 text-alignment mb-4">
+              <p class="gray-text fs-5">
+                Profissionais qualificados para os seus serviços, do início ao fim. Veja alguns depoimentos de quem já contratou a Habitta.
+              </p>
+            </div>
+          </div>
+          <div class="row px-2 pb-4 g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-lg-4">
+              <div class="card h-100 p-4">
+                <div class="d-flex align-items-center">
+                  <img src="./assets/images/foto_cliente.jpeg" class="photo me-3" alt="Foto da Cliente">
+                  <div class="d-flex flex-column justify-content-center">
+                    <h5 class="fw-semibold mb-0 title">Adalice</h5>
+                    <p class="text-secondary mb-0 small">Cliente da Habitta</p>
+                  </div>
+                </div>
+                <p class="mt-4 mb-0 comment">
+                  "Como é bom ter uma empresa assim para resolver nossos pequenos problemas de reformas. Amando a Habitta."
                 </p>
-                <ul class="text-start gray-text w-100">
-                  <li>Paredes e divisórias</li>
-                  <li>Muros e cercas</li>
-                  <li>Fundações</li>
-                  <li>Reforma estrutural</li>
-                </ul>
               </div>
             </div>
             <!-- Card 2 -->
-            <div class="col-md-6 col-xl-4 text-center">
-              <div class="card h-100 p-4 align-items-center">
-                <div class="mb-2 service-icon">
-                  <i class="bi bi-house fs-1"></i>
+            <div class="col-12 col-lg-4">
+              <div class="card h-100 p-4">
+                <div class="d-flex">
+                  <img src="./assets/images/foto_cliente.jpeg" class="photo me-3" alt="Foto da Cliente">
+                  <div class="d-flex flex-column justify-content-center">
+                    <h5 class="fw-semibold mb-0 title">Adalice</h5>
+                    <p class="text-secondary mb-0 small">Cliente da Habitta</p>
+                  </div>
                 </div>
-                <h5 class="fw-bold fs-4 title py-2">Telhados e Coberturas</h5>
-                <p class="mb-4 px-2 gray-text">
-                  Instalação, reparo e manutenção de telhados com diversos materiais.
+                <p class="mt-4 mb-0 comment">
+                  "Gostei muito do trabalho dele. Caprichoso e organizado. Ficou tudo consertado na minha casa."
                 </p>
-                <ul class="text-start gray-text w-100">
-                  <li>Instalação de telhados</li>
-                  <li>Troca de telhas</li>
-                  <li>Calhas e rufos</li>
-                  <li>Impermeabilização</li>
-                </ul>
               </div>
             </div>
             <!-- Card 3 -->
-            <div class="col-md-6 col-xl-4 text-center">
-              <div class="card h-100 p-4 align-items-center">
-                <div class="mb-2 service-icon">
-                  <i class="bi bi-tools fs-1"></i>
+            <div class="col-12 col-lg-4">
+              <div class="card h-100 p-4">
+                <div class="d-flex">
+                  <img src="./assets/images/foto_cliente.jpeg" class="photo me-3" alt="Foto da Cliente">
+                  <div class="d-flex flex-column justify-content-center">
+                    <h5 class="fw-semibold mb-0 title">Adalice</h5>
+                    <p class="text-secondary mb-0 small">Cliente da Habitta</p>
+                  </div>
                 </div>
-                <h5 class="fw-bold fs-4 title py-2">Manutenção Geral</h5>
-                <p class="mb-4 px-2 gray-text">
-                  Serviços diversos para manter sua casa em ordem.
+                <p class="mt-4 mb-0 comment">
+                  "Está ficando bom. Ele é bem exigente e caprichoso. Deixa tudo limpinho."
                 </p>
-                <ul class="text-start gray-text w-100">
-                  <li>Pintura residencial</li>
-                  <li>Elétrica básica</li>
-                  <li>Hidráulica</li>
-                  <li>Pequenos reparos</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -279,21 +390,31 @@
       </section>
     </main>
 
-    <footer class="footer text-light py-5">
+    <footer class="footer text-light py-5 px-2">
       <div class="container">
         <div class="row px-2 g-4">
           <div class="col-md-4">
             <h5 class="fw-bold">Habitta</h5>
             <p class="small">Você pede, a Habitta conecta.</p>
             <div class="d-flex gap-2 mb-2">
-              <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA==" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none">
+              <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-light text-decoration-none"
+              >
                 <i class="bi bi-instagram fs-4"></i>
               </a>
-              <a href="https://wa.me/5553991962807" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none">
+              <a
+                href="https://wa.me/5553991962807"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-light text-decoration-none"
+              >
                 <i class="bi bi-whatsapp fs-4"></i>
               </a>
             </div>
           </div>
+
           <div class="col-md-4 d-flex justify-content-md-center">
             <div>
               <h6 class="fw-bold">Links úteis</h6>
@@ -310,6 +431,7 @@
               </ul>
             </div>
           </div>
+
           <div class="col-md-4 d-flex justify-content-md-end">
             <div>
               <h6 class="fw-bold" id="contato">Contato</h6>
@@ -344,6 +466,14 @@
         </div>
       </div>
     </footer>
+
+    <!-- Float button -->
+    <a class="btn btn-success float-btn"
+      aria-label="WhatsApp Icon"
+      href="https://wa.me/5553991962807?text=Olá, gostaria de saber mais sobre os serviços da Habitta"
+      target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
 
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
