@@ -1,0 +1,68 @@
+@import url(./global.css);
+
+body {
+  padding-top: 80px;
+}
+
+main {
+  padding: 0 .5rem 2rem;
+  font-size: 18px;
+  text-align: justify;
+  color: #333333;
+  font-weight: light;
+  word-wrap: break-word;
+  max-width: 980px;
+  margin: auto;
+  line-height: 1.75;
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+main h2 {
+  font-size: 1.5rem;
+}
+
+.ul-primary {
+  margin-bottom: 1.5rem;
+}
+
+.ul-primary > li {
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.ul-secondary {
+  padding-left: 1.5rem;
+}
+
+.ul-secondary > li {
+  list-style-type: circle;
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--primary-blue);
+}
+
+.nav-pills .nav-link {
+  background-color: #80808028;
+  color: var(--secondary-gray);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  color: white;
+  background-color: #8080806b;
+}
+
+@media (max-width: 500px) {
+  main {
+    font-size: 1rem;
+  }
+
+  main li h2 {
+    font-size: 1.125rem;
+  }
+}
