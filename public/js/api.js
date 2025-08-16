@@ -8,7 +8,7 @@ async function registerUser(userData) {
       body: JSON.stringify(userData)
     });
     const result = await response.json();
-    console.log(result);
+    return result;
 
   } catch (error) {
     console.error(error);

@@ -1,7 +1,7 @@
 @import url('./global.css');
 
 body {
-  background-color: var(--primary-blue);
+  background-color: #14273e;
 }
 .auth-container {
   min-height: 100vh;

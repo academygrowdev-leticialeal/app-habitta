@@ -1,6 +1,4 @@
-export { formatDocument, formatPhone, updateForm };
-
-const documentField = document.getElementById('documentField');
+export { formatDocument, formatPhone };
 
 function getFieldNumber(field) {
   return field.value.replace(/\D+/g, '');
@@ -22,6 +20,7 @@ function formatCNPJ(cnpj) {
 }
 
 function formatDocument() {
+  const documentField = document.getElementById('documentField');
   const documentNumber = getFieldNumber(documentField);
   const format = (documentField.placeholder === 'CPF') ? formatCPF : formatCNPJ;
   documentField.value = format(documentNumber);
@@ -35,22 +34,4 @@ function formatPhone() {
   phoneNumber = phoneNumber.replace(/\((\d{2})(\d)/, '($1) $2');
   phoneNumber = phoneNumber.replace(/(\d{4,5})(\d{4})$/, '$1-$2');
   phoneInput.value = phoneNumber;
-}
-
-function updateForm(radioButton) {
-  if (radioButton.checked) {
-    document.getElementById('register-form').reset();
-    radioButton.checked = true;
-    updateFields(radioButton);
-  }
-}
-
-function updateFields(radioButton) {
-  const nameInput = document.getElementById('nameInput');
-  const isPessoaFisica = (radioButton.id === 'pessoaFisica');
-  
-  nameInput.placeholder = isPessoaFisica ? 'Nome completo' : 'Razão Social';
-  documentField.placeholder = isPessoaFisica ? 'CPF' : 'CNPJ';
-  documentField.maxLength = isPessoaFisica ? 14 : 18;
-  documentField.pattern = isPessoaFisica ? '\\d{3}.\\d{3}.\\d{3}-\\d{2}' : '\\d{2}.\\d{3}.\\d{3}/\\d{4}-\\d{2}';
 }

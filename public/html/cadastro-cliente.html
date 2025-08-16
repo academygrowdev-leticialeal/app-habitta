@@ -23,7 +23,7 @@
       <div class="painel-initial text-white text-center d-flex flex-column align-items-center justify-content-center h-100 w-100">
         <img class="mb-4 photo-logo" src="../assets/images/logo-white.png" alt="Logo">
         <h2 class="fw-bold mb-3 fs-1">Bem-vindo à Habitta</h2>
-        <p class="mb-4 small-text text-start">
+        <p class="mb-4 description-text text-start">
           Aqui você encontra soluções práticas e seguras para o seu lar.<br>
           Conectamos você aos melhores serviços com confiança e facilidade.
         </p>
@@ -32,22 +32,22 @@
     </div>
 
     <!-- Painel direito (formulário) -->
-    <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-4">
+    <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-md-4">
       <div class="form-box w-100">
-        <div class="title-form text-center mb-4">
-          <h2>Cadastro do Cliente</h2>
+        <div class="text-center mb-4">
+          <h2 class="fw-semibold title-form">Cadastro do Cliente</h2>
         </div>
         <form id="register-form">
           <!-- Pessoa Física / Jurídica -->
           <div class="mb-3">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="B2C" checked>
-            <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="B2B">
-            <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
-          </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="B2C" checked>
+              <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="B2B">
+              <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
+            </div>
           </div>
           <!-- Nome / Razão Social -->
           <div class="mb-3">
@@ -78,17 +78,48 @@
               <a href="./politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da Habitta.
             </label>
           </div>
-          <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">Cadastrar-se</button>
+          <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">
+            <span class="spinner-border spinner-border-sm me-2 d-none" aria-hidden="true"></span>
+            <span>Cadastrar-se</span>
+          </button>
         </form>
         <div class="form-footer mt-3 text-center">
           Já tem uma conta? <a href="./login.html">Faça login.</a>
         </div>
         <!-- Redes sociais -->
         <div class="social-login text-center mt-4">
-          <button class="btn btn-social me-2"><i class="bi bi-facebook"></i></button>
+          <a href="https://wa.me/5553991962807" class="btn btn-social me-2"><i class="bi bi-whatsapp"></i></a>
           <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA==" target="_blank" rel="noopener noreferrer" class="btn btn-social">
             <i class="bi bi-instagram"></i>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sucesso -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-body d-flex flex-column align-items-center text-center">
+          <i class="bi bi-check-circle-fill text-success"></i>
+          <h4 class="modal-title mb-2" id="successModalLabel">Sucesso!</h4>
+          <p class="fs-6">A sua conta foi criada com sucesso.</p>
+          <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal" data-bs-target="#successModal"">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Erro -->
+  <div class="modal fade" id="failModal" tabindex="-1" aria-labelledby="failModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-body d-flex flex-column align-items-center text-center">
+          <i class="bi bi-x-circle-fill text-danger"></i>
+          <h4 class="modal-title mb-2" id="failModalLabel">Oops!</h4>
+          <p class="fs-6">Ocorreu um erro no seu cadastro.</p>
+          <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal" data-bs-target="#failModal">Ok</button>
         </div>
       </div>
     </div>

@@ -1,30 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .bg-painel {
   background-color: #14273e;
 }
+
 .photo-logo{
   height: 150px; 
   width: 150px;
 }
+
 .painel-initial{
   max-width: 450px; 
   margin-bottom: 60px;
 }
-.small-text {
-  max-width: 300px;       
+
+.description-text {
+  max-width: 300px;
   line-height: 1.6;      
   font-size: 1.1rem;
 }
-.title-form h2 {
-  font-size: 2.0rem;
+
+.title-form {
+  font-size: 2.5rem;
   color: #14273e;
 }
+
 .form-box {
   background-color: #fff;
   padding: 40px;
@@ -33,27 +40,39 @@
   min-height: 500px; 
   margin-top: 60px;
 }
+
 .input-custom {
   background-color: #e6eaee;
   border: none;
   font-size: 1.05rem;
   padding: 0.75rem;
 }
+
 .input-custom:focus {
   background-color: #f1eeee;
   box-shadow: none;
 }
+
+.input-custom:disabled {
+  opacity: .6;
+}
+
 .form-check-input{
   border: 2px solid #c9c9c9;
 }
+
 .btn-blue {
   background-color: #14273e;
   color: white;
   border: none;
 }
-.btn-blue:hover {
+
+.btn-blue:hover, .btn-blue:disabled {
   background-color: #c9d9ee;
+  color: #14273e;
+  opacity: 1;
 }
+
 .btn-social {
   display: inline-block;
   border: none;
@@ -63,13 +82,50 @@
   font-size: 20px;
   transition: background-color 0.3s ease;
 }
+
 .btn-social:hover {
   background-color: #e1e1e1;
 }
+
+/* TOOLTIPS */
+
+.custom-tooltip {
+  --bs-tooltip-bg: rgb(221, 70, 70);
+  --bs-tooltip-color: #ffffff;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-padding-x: .8rem;
+  --bs-tooltip-padding-y: .4rem;
+  margin-bottom: 3px !important;
+}
+
+.form-control.is-invalid {
+  background-color: #f5ecec;
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: none;
+  /* background-color: #f1eeee; */
+  outline: 1px solid rgb(233, 201, 201);
+}
+
+/* MODAL */
+
+.modal .bi {
+  font-size: 5rem;
+  line-height: 1.25;
+}
+
+.modal .btn {
+  max-width: 200px;
+}
+
+/* MEDIA QUERY */
+
 @media (max-width: 768px) {
-  .small-text {
+  .description-text {
     font-size: 0.95rem;
   }
+
   h2.fs-1 {
     font-size: 1.8rem !important;
   }
