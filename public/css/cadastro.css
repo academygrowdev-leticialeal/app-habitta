@@ -1,40 +1,46 @@
 @import url('./global.css');
 
 body {
-  background-color: #14273e;
+  background-color: var(--darker-blue);
 }
+
 .auth-container {
   min-height: 100vh;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 1rem 1rem;
 }
+
 .title {
-  font-family: var(--font-title);
   text-align: center;
   font-size: 2.5rem;
 }
+
 .subtitle {
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
+
 .title-cards {
   font-size: 1.8rem;
 }
+
 .card-option p,
 .card-option ul {
   font-size: 1rem;
   line-height: 1.6;
 }
+
 .list-card {
   margin-bottom: 0.5rem;
   color: #333;
   padding-left: 10px;
 }
+
 .card-option {
   border: none;
   border-radius: 7px;
@@ -47,14 +53,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .card-option:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 .card-option .icon {
   font-size: 2rem;
   background-color: var(--primary-blue);
-  color: white;
+  color: #fff;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -63,23 +71,30 @@ body {
   justify-content: center;
   margin: 0 auto 1rem;
 }
+
 .btn-primary {
   background-color: var(--primary-blue);
-  border: none; 
-  outline: none;
+  border: none;
+  --bs-focus-ring-width: 0;
+  --bs-btn-active-bg: var(--secondary-gray);
 }
+
 .btn-primary:hover {
-  background-color: #808080; 
-  color: white;
+  background-color: var(--darker-blue);
+  color: #ffffff;
 }
 
 @media (max-width: 767px) {
-  .auth-container {
-    padding-top: 100px;
-  }
   .subtitle {
     margin-bottom: 2rem;
+    font-size: 1.3rem;
   }
+
+  .title, 
+  .subtitle {
+    text-align: left;
+  }
+  
   .list-card,
   .card-option {
     line-height: 1.5;

@@ -1,4 +1,4 @@
-export { formatDocument, formatPhone };
+export { formatDocument, formatPhone, clearErrors };
 
 function getFieldNumber(field) {
   return field.value.replace(/\D+/g, '');
@@ -34,4 +34,16 @@ function formatPhone() {
   phoneNumber = phoneNumber.replace(/\((\d{2})(\d)/, '($1) $2');
   phoneNumber = phoneNumber.replace(/(\d{4,5})(\d{4})$/, '$1-$2');
   phoneInput.value = phoneNumber;
+}
+
+function clearErrors() {  
+  document.querySelectorAll('.is-invalid').forEach(element => {
+    const tooltip = bootstrap.Tooltip.getInstance(element);
+    if (tooltip) {
+      tooltip.dispose();
+      tooltip._activeTrigger = {};
+      tooltip._element = document.createElement('noscript');
+    }
+    element.classList.remove('is-invalid');
+  });
 }

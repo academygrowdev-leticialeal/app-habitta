@@ -1,4 +1,4 @@
-import { formatDocument, formatPhone } from './utils.js';
+import { formatDocument, formatPhone, clearErrors } from './utils.js';
 
 const documentField = document.getElementById('documentField');
 const phoneInput = document.getElementById('phoneInput');
@@ -24,21 +24,6 @@ function updateFields(currentOption) {
   documentField.placeholder = isNaturalPerson ? 'CPF' : 'CNPJ';
   documentField.maxLength = isNaturalPerson ? 14 : 18;
   documentField.pattern = isNaturalPerson ? '\\d{3}.\\d{3}.\\d{3}-\\d{2}' : '\\d{2}.\\d{3}.\\d{3}/\\d{4}-\\d{2}';
-}
-
-function clearErrors() {  
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(element => {
-    const tooltip = bootstrap.Tooltip.getInstance(element);
-    if (tooltip) {
-      tooltip.dispose();
-      element.removeAttribute('data-bs-toggle');
-      element.removeAttribute('aria-describedby');
-    }
-  });
-
-  document.querySelectorAll('.is-invalid').forEach(element => {
-    element.classList.remove('is-invalid');
-  });
 }
 
 function disableForm() {
@@ -68,16 +53,7 @@ form.addEventListener('submit', async (event) => {
   data.acceptTerms = termsCheck.checked;
 
   disableForm();
-
   const result = await registerUser(data);
-  console.log(result);
-
-  // Exemplo de resposta
-  // const result = {
-  //   details: [{type: 'field', field: 'name', description: 'Nome inválido'}, {type: 'field', field: 'document', description: 'Documento inválido'}],
-  //   success: false
-  // };
-
   enableForm();
   
   if (result.success) {
@@ -90,15 +66,14 @@ form.addEventListener('submit', async (event) => {
   if (result.details) {
     result.details.forEach(detail => {
       const field = form.elements[detail.field];
-
+      
       if (field) {
         field.classList.add('is-invalid');
-        field.setAttribute('data-bs-toggle', 'tooltip');
 
         new bootstrap.Tooltip(field, {
           title: detail.description,
           placement: 'top',
-          trigger: 'hover',
+          trigger: 'hover focus',
           customClass: 'custom-tooltip'
         });
       } else {
