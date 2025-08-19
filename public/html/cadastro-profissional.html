@@ -17,80 +17,98 @@
 </head>
 
 <body>
-  <div class="d-flex flex-wrap w-100 vh-100">
-    <!-- Painel esquerdo (tela azul) -->
-    <div class="col-12 col-md-5 bg-painel d-flex justify-content-center align-items-center p-4">
-      <div class="painel-initial text-white text-center d-flex flex-column align-items-center justify-content-center h-100 w-100">
-        <img class="mb-4 photo-logo" src="../assets/images/logo-white.png" alt="Logo">
-        <h2 class="fw-bold mb-3 fs-1">Bem-vindo à Habitta</h2>
-        <p class="mb-4 description-text text-start">
-          Aqui você encontra soluções práticas e seguras para o seu lar.<br>
-          Conectamos você aos melhores serviços com confiança e facilidade.
-        </p>
-        <a href="./login.html" class="btn btn-outline-light rounded-pill px-4 py-2">ENTRAR</a>
+  <div class="container-fluid vh-100">
+    <div class="row vh-100">
+      <!-- Painel esquerdo (tela azul) -->
+      <div class="col-12 col-md-5 bg-panel d-flex justify-content-center align-items-center p-5 pb-4">
+        <div class="panel-initial text-white d-flex flex-column justify-content-center h-100 w-100 gap-2 gap-sm-3">
+          <img class="photo-logo" src="../assets/images/logo-white.png" alt="Logo">
+          <div>
+            <h2 class="fw-bold mb-3">Bem-vindo à Habitta!</h2>
+            <p class="mb-4 description-text">
+              Comece agora a se conectar com clientes de forma segura e eficiente. 
+            </p>
+          </div>
+          <a href="./login.html" class="btn btn-outline-light rounded-pill px-4 py-2">ENTRAR</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Painel direito (formulário) -->
-    <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-md-4">
-      <div class="form-box w-100">
-        <div class="text-center mb-4">
-          <h2 class="fw-semibold title-form">Cadastro do Profissional</h2>
-        </div>
-        <form id="register-form">
-          <!-- Pessoa Física / Jurídica / MEI -->
-          <div class="mb-3">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="PF" checked>
-              <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
+      <!-- Painel direito (formulário) -->
+      <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-md-4">
+        <div class="form-box px-3 w-100">
+          <div class="text-center mb-4">
+            <h2 class="fw-semibold title-form">Cadastro do Profissional</h2>
+          </div>
+          <form id="register-form">
+            <!-- Pessoa Física / Jurídica / MEI -->
+            <div class="btn-group w-100 mb-3" role="group" aria-label="Radio button para escolher o tipo de cadastro">
+              <input class="btn-check" type="radio" name="type" id="pessoaFisica" value="PF" checked>
+              <label class="btn btn-outline-custom" for="pessoaFisica">Pessoa Física</label>
+
+              <input class="btn-check" type="radio" name="type" id="pessoaJuridica" value="PJ">
+              <label class="btn btn-outline-custom" for="pessoaJuridica">Pessoa Jurídica</label>
+
+              <input class="btn-check" type="radio" name="type" id="mei" value="MEI">
+              <label class="btn btn-outline-custom" for="mei">MEI</label>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="PJ">
-              <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
-            </div>
+            <!-- <div class="mb-3 d-flex flex-column flex-lg-row gap-2">
               <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="type" id="mei" value="MEI">
-              <label class="form-check-label" for="mei">MEI</label>
+                <input class="form-check-input" type="radio" name="type" id="pessoaFisica" value="PF" checked>
+                <label class="form-check-label" for="pessoaFisica">Pessoa Física</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="type" id="pessoaJuridica" value="PJ">
+                <label class="form-check-label" for="pessoaJuridica">Pessoa Jurídica</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="type" id="mei" value="MEI">
+                <label class="form-check-label" for="mei">MEI</label>
+              </div>
+            </div> -->
+
+            <!-- Nome / Razão Social -->
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="nameInput" name="name" placeholder="Nome completo" required>
             </div>
+            <!-- CPF / CNPJ -->
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="documentField" name="document" placeholder="CPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}" maxlength="14" required>
+            </div> 
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="phoneInput" name="phone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control input-custom" name="email" placeholder="Email" required>
+            </div>
+            <div class="mb-4">
+              <input type="password" class="form-control input-custom" name="password" placeholder="Senha" minlength="6" required>
+            </div>
+            <!-- Aceite dos termos -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="termsCheck" required>
+              <label class="form-check-label" for="termsCheck">
+                Ao criar sua conta, você concorda com os 
+                <a href="./termos-de-uso.html?tab=profissionais" target="_blank">Termos de Uso</a> e a 
+                <a href="./politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da Habitta.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">
+              <span class="spinner-border spinner-border-sm me-1 d-none" aria-hidden="true"></span>
+              <span>Cadastrar-se</span>
+            </button>
+          </form>
+          <div class="form-footer mt-3 text-center">
+            Já tem uma conta? <a href="./login.html">Faça login.</a>
           </div>
-          <!-- Nome / Razão Social -->
-          <div class="mb-3">
-            <input type="text" class="form-control input-custom" id="nameInput" name="name" placeholder="Nome completo" required>
+          <!-- Suporte -->
+          <div class="social-login text-center mt-4">
+            <a href="https://wa.me/5553991962807" class="btn btn-social me-2">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="mailto:habittaoficial@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-social">
+              <i class="bi bi-envelope"></i>
+            </a>
           </div>
-          <div class="mb-3">
-            <input type="text" class="form-control input-custom" id="documentField" name="document" placeholder="CPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}" maxlength="14" required>
-          </div> 
-          <div class="mb-3">
-            <input type="text" class="form-control input-custom" id="phoneInput" name="phone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" required>
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control input-custom" name="email" placeholder="Email" required>
-          </div>
-          <div class="mb-4">
-            <input type="password" class="form-control input-custom" name="password" placeholder="Senha" minlength="6" required>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="termsCheck" required>
-            <label class="form-check-label" for="termsCheck">
-              Ao criar sua conta, você concorda com os 
-              <a href="./termos-de-uso.html?tab=profissionais" target="_blank">Termos de Uso</a> e a 
-              <a href="./politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da Habitta.
-            </label>
-          </div>
-          <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">
-            <span class="spinner-border spinner-border-sm me-2 d-none" aria-hidden="true"></span>
-            <span>Cadastrar-se</span>
-          </button>
-        </form>
-        <div class="form-footer mt-3 text-center">
-          Já tem uma conta? <a href="./login.html">Faça login.</a>
-        </div>
-        <!-- Redes sociais -->
-        <div class="social-login text-center mt-4">
-          <a href="https://wa.me/5553991962807" class="btn btn-social me-2"><i class="bi bi-whatsapp"></i></a>
-          <a href="https://www.instagram.com/habittaservicos?igsh=MWg5bWR2aGR0ZDcxNA==" target="_blank" rel="noopener noreferrer" class="btn btn-social">
-            <i class="bi bi-instagram"></i>
-          </a>
         </div>
       </div>
     </div>
