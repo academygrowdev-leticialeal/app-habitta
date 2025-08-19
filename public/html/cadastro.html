@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS Projeto -->
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-white sticky-top shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <div class="logo">
+            <img src="../assets/images/logo-blue.png" alt="logo">
+            <span class="title">Habitta</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-container">
+    <div class="container my-5">
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 mt-4 m-lg-0">
+          <h2 class="fw-bold title text-white">Como você gostaria de se cadastrar?</h2>
+          <p class="subtitle">Escolha a opção que melhor descreve o seu perfil.</p>
+        </div>
+
+        <!-- Cliente -->
+        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+          <div class="card card-option h-100">
+            <div class="icon">
+              <i class="bi bi-person"></i>
+            </div>
+            <h5 class="text-center fw-bold title-cards">Sou Cliente</h5>
+            <p class="text-center text-muted small">
+              Preciso contratar profissionais para reformas, reparos ou construções
+            </p>
+            <ul class="list-unstyled small ps-3">
+              <li class="list-card">• Encontre profissionais qualificados</li>
+              <li class="list-card">• Compare orçamentos facilmente</li>
+              <li class="list-card">• Acompanhe o progresso dos serviços</li>
+              <li class="list-card">• Avalie e deixe feedbacks</li>
+            </ul>
+            <a href="./cadastro-cliente.html" class="btn btn-primary w-100 mt-auto">Cadastrar como Cliente</a>
+          </div>
+        </div>
+
+        <!-- Prestador -->
+        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+          <div class="card card-option h-100">
+            <div class="icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h5 class="text-center fw-bold title-cards">Sou Prestador</h5>
+            <p class="text-center text-muted small">
+              Ofereço serviços de construção, reformas e reparos
+            </p>
+            <ul class="list-unstyled small ps-3">
+              <li class="list-card">• Encontre novos clientes</li>
+              <li class="list-card">• Gerencie seus serviços</li>
+              <li class="list-card">• Receba avaliações positivas</li>
+              <li class="list-card">• Cresça seu negócio</li>
+            </ul>
+            <a href="./cadastro-profissional.html" class="btn btn-primary w-100 mt-auto">Cadastrar como Prestador</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

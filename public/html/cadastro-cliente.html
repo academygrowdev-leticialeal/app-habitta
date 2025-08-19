@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do Cliente</title>
+
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS Projeto -->
+  <link rel="stylesheet" href="../css/form-acesso.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-fluid vh-100">
+      <div class="row vh-100">
+      <!-- Painel esquerdo (tela azul) -->
+      <div class="col-12 col-md-5 bg-panel d-flex justify-content-center align-items-center p-5 pb-4">
+        <div class="panel-initial text-white d-flex flex-column justify-content-center h-100 w-100 gap-2 gap-sm-3">
+          <img class="photo-logo" src="../assets/images/logo-white.png" alt="Logo">
+          <div>
+            <h2 class="fw-bold mb-3">Bem-vindo à Habitta</h2>
+            <p class="mb-4 description-text">
+              Aqui você encontra os melhores profissionais para os seus serviços, de forma rápida e segura.
+            </p>
+          </div>
+          <a href="./login.html" class="btn btn-outline-light rounded-pill px-4 py-2">ENTRAR</a>
+        </div>
+      </div>
+
+      <!-- Painel direito (formulário) -->
+      <div class="col-12 col-md-7 d-flex align-items-center justify-content-center p-md-4">
+        <div class="form-box px-3 w-100">
+          <div class="text-center mb-4">
+            <h2 class="fw-semibold title-form">Cadastro do Cliente</h2>
+          </div>
+          <form id="register-form">
+            <!-- Pessoa Física / Jurídica -->
+            <div class="btn-group w-100 mb-3" role="group" aria-label="Radio button para escolher o tipo de cadastro">
+              <input class="btn-check" type="radio" name="type" id="pessoaFisica" value="B2C" checked>
+              <label class="btn btn-outline-custom" for="pessoaFisica">Pessoa Física</label>
+
+              <input class="btn-check" type="radio" name="type" id="pessoaJuridica" value="B2B">
+              <label class="btn btn-outline-custom" for="pessoaJuridica">Pessoa Jurídica</label>
+            </div>
+            <!-- Nome / Razão Social -->
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="nameInput" name="name" placeholder="Nome completo" required>
+            </div>
+            <!-- CPF / CNPJ -->
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="documentField" name="document" placeholder="CPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}" maxlength="14" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control input-custom" id="phoneInput" name="phone" placeholder="Telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}" maxlength="15" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control input-custom" name="email" placeholder="Email" required>
+            </div>
+            <div class="mb-4">
+              <input type="password" class="form-control input-custom" name="password" placeholder="Senha" minlength="6" required>
+            </div>
+            <!-- Aceite dos termos -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="termsCheck" required>
+              <label class="form-check-label" for="termsCheck">
+                Ao criar sua conta, você concorda com os 
+                <a href="./termos-de-uso.html?tab=clientes" target="_blank">Termos de Uso</a> e a 
+                <a href="./politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da Habitta.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-blue w-100 py-2 mt-3" name="submit">
+              <span class="spinner-border spinner-border-sm me-1 d-none" aria-hidden="true"></span>
+              <span>Cadastrar-se</span>
+            </button>
+          </form>
+          <div class="form-footer mt-3 text-center">
+            Já tem uma conta? <a href="./login.html">Faça login.</a>
+          </div>
+          <!-- Suporte -->
+          <div class="social-login text-center mt-4">
+            <a href="https://wa.me/5553991962807" class="btn btn-social me-2" title="Suporte via WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="mailto:habittaoficial@gmail.com" target="_blank" class="btn btn-social" title="Suporte via e-mail">
+              <i class="bi bi-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sucesso -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-body d-flex flex-column align-items-center text-center">
+          <i class="bi bi-check-circle-fill text-success"></i>
+          <h4 class="modal-title mb-2" id="successModalLabel">Sucesso!</h4>
+          <p class="fs-6">A sua conta foi criada com sucesso.</p>
+          <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal" data-bs-target="#successModal"">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Erro -->
+  <div class="modal fade" id="failModal" tabindex="-1" aria-labelledby="failModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-body d-flex flex-column align-items-center text-center">
+          <i class="bi bi-x-circle-fill text-danger"></i>
+          <h4 class="modal-title mb-2" id="failModalLabel">Oops!</h4>
+          <p class="fs-6">Ocorreu um erro no seu cadastro.</p>
+          <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal" data-bs-target="#failModal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- JS Projeto -->
+  <script src="../js/api.js"></script>
+  <script src="../js/cadastro.js" type="module"></script>
+</body>
+</html>

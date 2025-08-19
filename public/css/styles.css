@@ -196,6 +196,10 @@ section {
 /* MEDIA QUERY */
 
 @media (max-width: 600px) {
+  html {
+    scroll-padding-top: 30px;
+  }
+  
   .button-group {
     flex-direction: column;
   }
