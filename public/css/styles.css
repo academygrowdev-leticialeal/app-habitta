@@ -4,12 +4,31 @@ html {
   scroll-padding-top: 50px;
 }
 
-.gray-text {
-  color: var(--secondary-gray);
-}
-
 section {
   padding: 80px 20px;
+}
+
+.gray-text {
+  color: var(--secondary-gray);
+  line-height: 1.7;
+}
+
+.text-alignment {
+  text-align: center;
+}
+
+.float-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* SECTION - HERO */
@@ -20,18 +39,14 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
 }
 
-.hero p {
-  line-height: 1.5;
-}
-
 .max-w {
-  max-width: 700px;
+  max-width: 680px;
 }
 
 .btn-hero {
@@ -88,6 +103,7 @@ section {
   color: var(--secondary-gray);
   font-size: 0.95rem;
   line-height: 1.75;
+  text-align: center;
 }
 
 /* SECTION - BENEFICIOS */
@@ -120,13 +136,70 @@ section {
   color: #ffffff;
 }
 
+/* SECTION - SERVIÇOS */
+
 .service-icon {
-  color: #1f3d63;
+  color: var(--primary-blue);
+  font-size: 2.8rem;
+  padding: 5px;
+  text-align: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  background-color: #e0ebf5;
+  border: 1px solid #14273e33;
+  border-radius: 5px;
+}
+
+.service-card > div {
+  font-size: 2rem;
+}
+
+.service-card > h5 {
+  text-align: left;
+}
+
+.service-card:hover {
+  background-color: hsl(210, 48%, 88%);
+}
+
+#servicos .card {
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+#servicos .card:hover {
+  box-shadow: none;
+}
+
+/* SECTION - DEPOIMENTOS */
+
+.photo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;       
+  object-fit: cover;         
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+  color: #808080e0;
+  font-style: italic;
+  line-height: 1.7;
 }
 
 /* MEDIA QUERY */
 
 @media (max-width: 600px) {
+  html {
+    scroll-padding-top: 30px;
+  }
+  
   .button-group {
     flex-direction: column;
   }
@@ -135,7 +208,19 @@ section {
     background-color: #ffffff10;
   }
 
-  .hero p, .hero h1 {
-    text-align: start;
+  .float-btn {
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .step-text {
+    text-align: center;
+  }
+
+  .text-alignment {
+    text-align: left;
   }
 }

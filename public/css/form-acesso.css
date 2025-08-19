@@ -83,6 +83,8 @@ a:hover {
   background-color: var(--primary-blue);
   color: #ffffff;
   border: none;
+  --bs-btn-active-bg: #e6eaee;
+  --bs-btn-active-color: #777;
 }
 
 .btn-blue:hover {
@@ -90,7 +92,7 @@ a:hover {
   color: #ffffff;
 }
 
-.btn-blue:disabled, .btn-blue:active {
+.btn-blue:disabled {
   background-color: #e6eaee;
   color: #777;
   opacity: 1;
