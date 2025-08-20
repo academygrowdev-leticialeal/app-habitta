@@ -45,6 +45,11 @@ a:hover {
 
 /* FORM */
 
+#login-form {
+  width: 100%;
+  max-width: 480px;
+}
+
 .title-form {
   font-size: 2.5rem;
   color: var(--primary-blue);
