@@ -16,6 +16,14 @@ function enableForm() {
   submitButton.firstElementChild.classList.add('d-none');
 }
 
+function checkLogged() {
+  if (localStorage.getItem('token') || sessionStorage.getItem('token')) {
+    window.location.href = './home.html';
+  }
+}
+
+checkLogged();
+
 window.addEventListener('load', () => form.reset());
 
 form.addEventListener('submit', async (event) => {
@@ -32,7 +40,7 @@ form.addEventListener('submit', async (event) => {
     const storage = rememberCheck.checked ? localStorage : sessionStorage;
     storage.setItem('token', result.data.token);
     storage.setItem('userData', JSON.stringify(result.data.user));
-    window.location.href = '../html/home.html';
+    window.location.href = './home.html';
     return;
   }
   

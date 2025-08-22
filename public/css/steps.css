@@ -1,6 +1,8 @@
+@import url(./global.css);
+
 body {
   background: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins, sans-serif;
   color: #1c2b4a;
 }
 
@@ -87,14 +89,29 @@ li p {
 }
 
 .btn-custom {
-  background: #1c2b4a;
-  color: #fff;
   border-radius: 8px;
   padding: 10px 20px;
   font-weight: 500;
 }
-.btn-custom:hover { 
-  background: #7f8081; 
+
+.btn-skip {
+  background-color: var(--secondary-gray);
+  color: #fff;
+}
+
+.btn-skip:hover {
+  color: var(--darker-blue);
+  border-color: var(--darker-blue); 
+}
+
+.btn-next {
+  background-color: var(--darker-blue);
+  color: #fff;
+}
+
+.btn-next:hover { 
+  background-color: var(--secondary-gray); 
+  color: #fff;
 }
 
 /* Check-cards */
@@ -123,7 +140,10 @@ li p {
   color: #fff;
 }
 
-.check-card label:hover { background: #e6f0ff; }
+.check-card label:hover { 
+  background: #e6f0ff; 
+}
+
 .servicos-container {
   display: flex;
   flex-wrap: wrap;
@@ -137,9 +157,18 @@ li p {
   background-color: #c6c6c9;
   border-radius: 4px;
 }
+
 .progress-bar {
   background-color: #1c2b4a;
   transition: width 0.3s ease-in-out;
+}
+
+/* Botão de logout */
+
+.btn-logout {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 /* Responsividade */

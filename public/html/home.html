@@ -26,12 +26,12 @@
 
       <!-- NAV -->
       <ul class="nav nav-tabs stepper-header mb-4" id="cadastroTab" role="tablist">
-        <li class="nav-item step"><a class="nav-link active" data-bs-toggle="tab" href="#empresa"><div class="circle">1</div><p>Dados da Empresa</p></a></li>
-        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#pessoais"><div class="circle">2</div><p>Dados Pessoais</p></a></li>
-        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#endereco"><div class="circle">3</div><p>Endereço</p></a></li>
-        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#documentos"><div class="circle">4</div><p>Documentos</p></a></li>
-        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#servicos"><div class="circle">5</div><p>Serviços</p></a></li>
-        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#banco"><div class="circle">6</div><p>Dados Bancários</p></a></li>
+        <li class="nav-item step"><a class="nav-link active" data-bs-toggle="tab" href="#company"><div class="circle">1</div><p>Dados da Empresa</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#personal"><div class="circle">2</div><p>Dados Pessoais</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#address"><div class="circle">3</div><p>Endereço</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#documents"><div class="circle">4</div><p>Documentos</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#services"><div class="circle">5</div><p>Serviços</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#bank"><div class="circle">6</div><p>Dados Bancários</p></a></li>
       </ul>
 
       <!-- Barra de progresso -->
@@ -42,7 +42,7 @@
       <!-- Conteúdo -->
       <div class="tab-content">
         <!-- Step 1: Empresa -->
-        <div class="tab-pane fade show active form-section" id="empresa">
+        <div class="tab-pane fade show active form-section" id="company">
           <h4>Dados da Empresa</h4>
           
           <div class="mb-3"><label class="form-label">Razão social *</label><input type="text" class="form-control"></div>
@@ -51,8 +51,8 @@
           <div class="mb-3"><label class="form-label">Telefone *</label><input type="text" class="form-control"></div>
         </div>
 
-        <!-- Step 2: Pessoais -->
-        <div class="tab-pane fade form-section" id="pessoais">
+        <!-- Step 2: Dados Pessoais -->
+        <div class="tab-pane fade form-section" id="personal">
           <h4>Dados Pessoais / Representante Legal</h4>
           
           <div class="mb-3"><label class="form-label">Nome completo *</label><input type="text" class="form-control"></div>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- Step 3: Endereço -->
-        <div class="tab-pane fade form-section" id="endereco">
+        <div class="tab-pane fade form-section" id="address">
           <h4>Endereço</h4>
           
           <div class="mb-3"><label class="form-label">Rua *</label><input type="text" class="form-control"></div>
@@ -85,7 +85,7 @@
         </div>
 
         <!-- Step 4: Documentos -->
-        <div class="tab-pane fade form-section" id="documentos">
+        <div class="tab-pane fade form-section" id="documents">
           <h4>Documentos</h4>
           
           <div class="mb-3"><label class="form-label">Comprovante de endereço *</label><input type="file" class="form-control"></div>
@@ -102,8 +102,8 @@
           <div class="mb-3"><label class="form-label">Documento de Identificação - Verso *</label><input type="file" class="form-control"></div>
         </div>
 
-        <!-- Step 5: Profissionais -->
-        <div class="tab-pane fade form-section" id="servicos">
+        <!-- Step 5: Serviços -->
+        <div class="tab-pane fade form-section" id="services">
           <h4>Serviços</h4>
           
           <label class="form-label">Tipos de serviços prestados</label>
@@ -118,7 +118,7 @@
         </div>
 
         <!-- Step 6: Banco -->
-        <div class="tab-pane fade form-section" id="banco">
+        <div class="tab-pane fade form-section" id="bank">
           <h4>Dados Bancários</h4>
           
           <div class="row mb-3">
@@ -144,16 +144,19 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-between pt-4">
-        <button type="button" class="btn btn-custom skip-btn" data-skip="#endereco">
+      <div class="d-flex justify-content-end pt-4 gap-2">
+        <button id="skip-button" type="button" class="btn btn-custom btn-skip">
           Pular etapa
         </button>
-        <button type="button" class="btn btn-custom next-btn" data-next="#pessoais">
-          Continuar <i class="bi bi-arrow-right ms-1"></i>
+        <button id="next-button" type="button" class="btn btn-custom btn-next">
+          Salvar e Continuar <i class="bi bi-arrow-right ms-1"></i>
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Logout button (Teste) -->
+  <a id="logout-button" class="btn btn-danger btn-logout">Sair</a>
 
   <!-- JS Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
