@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS Projeto -->
+  <link rel="stylesheet" href="../css/steps.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="stepper-wrapper">
+      <div class="hero-section text-center mb-4">
+        <h2 class="fw-bold">Complete o seu cadastro</h2>
+        <p>Preencha as informações solicitadas para liberar as funcionalidades da plataforma</p>
+      </div>
+
+      <!-- NAV -->
+      <ul class="nav nav-tabs stepper-header mb-4" id="cadastroTab" role="tablist">
+        <li class="nav-item step"><a class="nav-link active" data-bs-toggle="tab" href="#empresa"><div class="circle">1</div><p>Dados da Empresa</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#pessoais"><div class="circle">2</div><p>Dados Pessoais</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#endereco"><div class="circle">3</div><p>Endereço</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#documentos"><div class="circle">4</div><p>Documentos</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#servicos"><div class="circle">5</div><p>Serviços</p></a></li>
+        <li class="nav-item step"><a class="nav-link" data-bs-toggle="tab" href="#banco"><div class="circle">6</div><p>Dados Bancários</p></a></li>
+      </ul>
+
+      <!-- Barra de progresso -->
+      <div class="progress mb-4">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+      </div>
+
+      <!-- Conteúdo -->
+      <div class="tab-content">
+        <!-- Step 1: Empresa -->
+        <div class="tab-pane fade show active form-section" id="empresa">
+          <h4>Dados da Empresa</h4>
+          
+          <div class="mb-3"><label class="form-label">Razão social *</label><input type="text" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">Nome fantasia</label><input type="text" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">Email da empresa *</label><input type="email" class="form-control" placeholder="Email comercial"></div>
+          <div class="mb-3"><label class="form-label">Telefone *</label><input type="text" class="form-control"></div>
+        </div>
+
+        <!-- Step 2: Pessoais -->
+        <div class="tab-pane fade form-section" id="pessoais">
+          <h4>Dados Pessoais / Representante Legal</h4>
+          
+          <div class="mb-3"><label class="form-label">Nome completo *</label><input type="text" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">Data de nascimento *</label><input type="date" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">CPF *</label><input type="text" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">Telefone *</label><input type="text" class="form-control"></div>
+        </div>
+
+        <!-- Step 3: Endereço -->
+        <div class="tab-pane fade form-section" id="endereco">
+          <h4>Endereço</h4>
+          
+          <div class="mb-3"><label class="form-label">Rua *</label><input type="text" class="form-control"></div>
+          <div class="row mb-3">
+            <div class="col-md-3"><label class="form-label">Número *</label><input type="text" class="form-control"></div>
+            <div class="col-md-3"><label class="form-label">Complemento</label><input type="text" class="form-control"></div>
+            <div class="col-md-6"><label class="form-label">Bairro *</label><input type="text" class="form-control"></div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6"><label class="form-label">Cidade *</label><input type="text" class="form-control"></div>
+            <div class="col-md-3"><label class="form-label">Estado *</label><input type="text" class="form-control"></div>
+            <div class="col-md-3">
+              <label class="form-label">CEP *</label>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="00000-000">
+                <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Documentos -->
+        <div class="tab-pane fade form-section" id="documentos">
+          <h4>Documentos</h4>
+          
+          <div class="mb-3"><label class="form-label">Comprovante de endereço *</label><input type="file" class="form-control"></div>
+          <div class="mb-2">Tipo do documento de Identificação</div>
+          <div class="form-check form-check-inline mb-3">
+            <input class="form-check-input" type="radio" name="documentType" id="rg" value="RG" checked>
+            <label class="form-check-label" for="rg">RG</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="documentType" id="cnh" value="CNH">
+            <label class="form-check-label" for="cnh">CNH</label>
+          </div>
+          <div class="mb-3"><label class="form-label">Documento de Identificação - Frente *</label><input type="file" class="form-control"></div>
+          <div class="mb-3"><label class="form-label">Documento de Identificação - Verso *</label><input type="file" class="form-control"></div>
+        </div>
+
+        <!-- Step 5: Profissionais -->
+        <div class="tab-pane fade form-section" id="servicos">
+          <h4>Serviços</h4>
+          
+          <label class="form-label">Tipos de serviços prestados</label>
+          <div class="servicos-container">
+            <div class="check-card"><input type="checkbox" id="servicoReformas"><label for="servicoReformas">Reformas</label></div>
+            <div class="check-card"><input type="checkbox" id="servicoPintura"><label for="servicoPintura">Pintura</label></div>
+            <div class="check-card"><input type="checkbox" id="servicoEletrica"><label for="servicoEletrica">Elétrica</label></div>
+            <div class="check-card"><input type="checkbox" id="servicoHidraulica"><label for="servicoHidraulica">Hidráulica</label></div>
+          </div>
+          <div class="mb-3"><label class="form-label">Resumo profissional</label><textarea class="form-control" rows="3"></textarea></div>
+          <div class="mb-3"><label class="form-label">Fotos de trabalhos realizados</label><input type="file" class="form-control" multiple></div>
+        </div>
+
+        <!-- Step 6: Banco -->
+        <div class="tab-pane fade form-section" id="banco">
+          <h4>Dados Bancários</h4>
+          
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Natureza da conta *</label>
+              <select class="form-select"><option>Física</option><option>Jurídica</option></select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">CPF/CNPJ *</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="mb-3"><label class="form-label">Nome do titular *</label><input type="text" class="form-control"></div>
+          <div class="row mb-3">
+            <div class="col-md-4"><label class="form-label">Banco *</label><input type="text" class="form-control"></div>
+            <div class="col-md-4"><label class="form-label">Agência *</label><input type="text" class="form-control"></div>
+            <div class="col-md-4"><label class="form-label">Conta *</label><input type="text" class="form-control"></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Tipo de conta *</label>
+            <select class="form-select"><option>Poupança</option><option>Corrente</option><option>Pagamento</option></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between pt-4">
+        <button type="button" class="btn btn-custom skip-btn" data-skip="#endereco">
+          Pular etapa
+        </button>
+        <button type="button" class="btn btn-custom next-btn" data-next="#pessoais">
+          Continuar <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- JS Projeto -->
+  <script src="../js/steps.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+body {
+  background: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1c2b4a;
+}
+
+li p { 
+  color: #0b275e; 
+}
+
+/* Stepper */
+
+.nav-tabs .nav-link {
+  border: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.nav-tabs .nav-link.active {
+  border: none !important;
+  background: transparent !important;
+}
+
+.stepper-wrapper {
+  background: #e6e6e979;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  max-width: 900px;
+  margin: auto;
+}
+
+.stepper-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+}
+
+.step .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #afb1b3;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+}
+
+.step p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.step:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--step-circle) / 2);
+  left: calc(-50% + var(--step-circle) / 2);
+  width: calc(100% - var(--step-circle));
+  height: 2px;
+  background: #c6c6c9; /* cor da linha */
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Form */
+
+.form-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-section h4 { 
+  font-weight: 700; 
+  margin-bottom: 15px; 
+}
+
+.btn-custom {
+  background: #1c2b4a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.btn-custom:hover { 
+  background: #7f8081; 
+}
+
+/* Check-cards */
+
+.check-card input[type="checkbox"] { 
+  display: none; 
+}
+
+.check-card label {
+  display: inline-block;
+  border: 2px solid #1c2b4a;
+  border-radius: 6px;
+  padding: 10px 22px;
+  cursor: pointer;
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1c2b4a;
+  transition: all .2s;
+  min-width: 126px;
+  text-align: center;
+}
+
+.check-card input[type="checkbox"]:checked + label {
+  background: #1c2b4a;
+  color: #fff;
+}
+
+.check-card label:hover { background: #e6f0ff; }
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Barra de progresso */
+
+.progress {
+  height: 8px;
+  background-color: #c6c6c9;
+  border-radius: 4px;
+}
+.progress-bar {
+  background-color: #1c2b4a;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .stepper-header { 
+    flex-direction: column; 
+    gap: 25px; 
+  }
+
+  .step .circle { 
+    width: 60px; 
+    height: 60px; 
+    font-size: 1.3rem; 
+  }
+
+  .stepper-header::before { 
+    display: none; 
+  }
+
+  .row .col-md-3, 
+  .row .col-md-4, 
+  .row .col-md-6 { 
+    flex: 0 0 100%;
+    max-width: 100%; 
+  }
+
+  .form-section { 
+    padding: 15px; 
+  }
+
+  .btn, 
+  .btn-custom, 
+  .form-select, 
+  .form-control { 
+    font-size: 1rem; 
+    padding: 12px; 
+  }
+}
