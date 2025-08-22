@@ -1,4 +1,4 @@
-export { formatDocument, formatPhone, clearErrors };
+export { formatDocument, formatPhone, formatText, clearErrors };
 
 function getFieldNumber(field) {
   return field.value.replace(/\D+/g, '');
@@ -34,6 +34,13 @@ function formatPhone() {
   phoneNumber = phoneNumber.replace(/\((\d{2})(\d)/, '($1) $2');
   phoneNumber = phoneNumber.replace(/(\d{4,5})(\d{4})$/, '$1-$2');
   phoneInput.value = phoneNumber;
+}
+
+function formatText(text) {
+  text = text.trim();
+  text = text[0].toUpperCase() + text.slice(1);
+  text = text.endsWith('.') ? text : `${text}.`;
+  return text;
 }
 
 function clearErrors() {  

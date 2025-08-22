@@ -1,4 +1,4 @@
-import { formatDocument, formatPhone, clearErrors } from './utils.js';
+import { formatDocument, formatPhone, formatText, clearErrors } from './utils.js';
 
 const documentField = document.getElementById('documentField');
 const phoneInput = document.getElementById('phoneInput');
@@ -71,7 +71,7 @@ form.addEventListener('submit', async (event) => {
         field.classList.add('is-invalid');
 
         new bootstrap.Tooltip(field, {
-          title: detail.description,
+          title: formatText(detail.description),
           placement: 'top',
           trigger: 'hover focus',
           customClass: 'custom-tooltip'
